@@ -2,7 +2,7 @@
   "name": "landify",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": "https://balmacefa.github.io/nft-engine-api-website",
   "dependencies": {
     "gh-pages": "^3.2.3",
     "prop-types": "15.7.2",
@@ -12,7 +12,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3"
   },
+
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
