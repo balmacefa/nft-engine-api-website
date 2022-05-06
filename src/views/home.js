@@ -12,8 +12,8 @@ const Home = (props) => {
   return (
     <div className="home-container">
       <Helmet>
-        <title>Landify</title>
-        <meta property="og:title" content="Landify" />
+        <title>NFT Engine | 1 call NFT</title>
+        <meta property="og:title" content="NFT Engine" />
       </Helmet>
       <div data-role="Header" className="home-header-container">
         <header className="home-header">
@@ -54,7 +54,7 @@ const Home = (props) => {
             <div className="home-logo1">
               <img
                 alt="image"
-                src="/playground_assets/logotype-dark.svg"
+                src={process.env.PUBLIC_URL +"/playground_assets/logotype-dark.svg"}
                 className="home-image04"
               />
             </div>
@@ -189,22 +189,22 @@ const Home = (props) => {
           <div className="home-blur-background"></div>
           <img
             alt="image"
-            src="/playground_assets/turquoise-circle.svg"
+            src={process.env.PUBLIC_URL +"/playground_assets/turquoise-circle.svg"}
             className="home-turquoise-cirble"
           />
           <img
             alt="image"
-            src="/playground_assets/purple-circle.svg"
+            src={process.env.PUBLIC_URL +"/playground_assets/purple-circle.svg"}
             className="home-purple-circle"
           />
           <img
             alt="image"
-            src="/playground_assets/left.svg"
+            src={process.env.PUBLIC_URL +"/playground_assets/left.svg"}
             className="home-left"
           />
           <img
             alt="image"
-            src="/playground_assets/right.svg"
+            src={process.env.PUBLIC_URL +"/playground_assets/right.svg"}
             className="home-right"
           />
         </div>
@@ -221,13 +221,13 @@ const Home = (props) => {
           <div className="home-container12">
             <StatsCard
               number="Resilient Redis queue"
-              image_src="/playground_assets/01.svg"
+              image_src={process.env.PUBLIC_URL + "/playground_assets/01.svg"}
               description="Jobs are placed in a resilient Redis queue"
               rootClassName="stats-card-root-class-name1"
             ></StatsCard>
             <StatsCard
               number="Attempts until NFT is successfully deployed"
-              image_src="/playground_assets/04.svg"
+              image_src={process.env.PUBLIC_URL +"/playground_assets/04.svg"}
               description="The nature of the networks and technology used to create non-fungible tokens (NFTs) means that there are multiple potential points of failure. To account for this, a resilience work queue is used that attempts each step until the NFT is successfully deployed. If a job does not succeed after 10 tries, it is considered unrecoverable."
               rootClassName="stats-card-root-class-name"
             ></StatsCard>
@@ -427,12 +427,12 @@ const Home = (props) => {
           <FeatureCard
             text="NFTs could be employed for a range of applications. They can, for example, be used to signify ownership of digital goods like art, music, or videos, as well as any JSON structure. They can also be used to represent tangible items like automobiles and houses. NFTs can also be used to represent shares in a firm or cryptocurrency tokens.\n"
             title="High Compatibility"
-            image_src="/playground_assets/02.svg"
+            image_src={process.env.PUBLIC_URL +"/playground_assets/02.svg"}
           ></FeatureCard>
           <FeatureCard
             text="Use integrations for systems like Shopify, WooCommerce, NetSuite, and more.\nGive your most loyal customer access to premium products or request in nft forms."
             title="Prebuilt integrations\n"
-            image_src="/playground_assets/03.svg"
+            image_src={process.env.PUBLIC_URL +"/playground_assets/03.svg"}
           ></FeatureCard>
         </div>
       </div>
@@ -475,34 +475,34 @@ const Home = (props) => {
         ></BlogPostCard2>
         <img
           alt="image"
-          src="/playground_assets/turquoise-circle.svg"
+          src={process.env.PUBLIC_URL + "/playground_assets/turquoise-circle.svg"}
           className="home-turquoise-cirble1"
         />
         <img
           alt="image"
-          src="/playground_assets/purple-circle.svg"
+          src={process.env.PUBLIC_URL + "/playground_assets/purple-circle.svg"}
           className="home-purple-circle1"
         />
         <img
           alt="image"
-          src="/playground_assets/purple-circle.svg"
+          src={process.env.PUBLIC_URL + "/playground_assets/purple-circle.svg"}
           className="home-purple-circle2"
         />
         <img
           alt="image"
-          src="/playground_assets/left.svg"
+          src={process.env.PUBLIC_URL + "/playground_assets/left.svg"}
           className="home-left1"
         />
         <img
           alt="image"
-          src="/playground_assets/right.svg"
+          src={process.env.PUBLIC_URL + "/playground_assets/right.svg"}
           className="home-right1"
         />
       </div>
       <div className="home-experiencia-de-usuario">
         <div className="home-container27">
           <img
-            src="/playground_assets/2022-05-03_20-17-1100w.png"
+            src={process.env.PUBLIC_URL + "/playground_assets/2022-05-03_20-17-1100w.png"}
             alt="image"
             className="home-image08"
           />
@@ -510,7 +510,7 @@ const Home = (props) => {
             <div className="home-container29">
               <img
                 alt="image"
-                src="/playground_assets/quote-mark.svg"
+                src={process.env.PUBLIC_URL +"/playground_assets/quote-mark.svg"}
                 className="home-image09"
               />
               <h1 className="home-text084 headline2">
@@ -522,14 +522,14 @@ const Home = (props) => {
                 text="Save Historical events, agreement, contract of gavideo game. \n- Air drop NFts\n- No knowledge required\n- Address splitter periodical or stream of NFTs with crypto revenue.\n- Save Historical events, agreement, contract of video game\n- NFTs can be used to represent ownership of digital goods like art, music, or videos, as well as any JSON structure."
                 text1="s"
                 text2="c"
-                image_src="/playground_assets/logo-4.svg"
+                image_src={process.env.PUBLIC_URL + "/playground_assets/logo-4.svg"}
                 rootClassName="testimonials-card-root-class-name"
               ></TestimonialsCard>
             </div>
           </div>
           <img
             alt="image"
-            src="/playground_assets/2022-05-03_20-16-700h.png"
+            src={process.env.PUBLIC_URL + "/playground_assets/2022-05-03_20-16-700h.png"}
             className="home-image10"
           />
           <div className="home-container31">
