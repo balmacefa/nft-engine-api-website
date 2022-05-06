@@ -22,7 +22,7 @@ const StatsCard = (props) => {
 
 StatsCard.defaultProps = {
   number: '10',
-  image_src: process.env.PUBLIC_URL +playground_assets'/playground_assets/05.svg',
+  image_src: process.env.PUBLIC_URL + '/playground_assets/05.svg',
   description: 'Description',
   image_alt: 'image',
   rootClassName: '',
