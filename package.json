@@ -2,7 +2,7 @@
   "name": "nft-engine-api",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://balmacefa.github.io/nfr-engine-api-website",
+  "homepage": "https://balmacefa.github.io/nft-engine-api-website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
