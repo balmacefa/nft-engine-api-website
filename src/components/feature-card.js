@@ -21,7 +21,7 @@ const FeatureCard = (props) => {
 FeatureCard.defaultProps = {
   title: 'Title',
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
-  image_src: '/playground_assets/01.svg',
+  image_src: process.env.PUBLIC_URL +'/playground_assets/01.svg',
   image_alt: 'image',
 }
 

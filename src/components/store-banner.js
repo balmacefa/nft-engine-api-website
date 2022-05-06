@@ -18,7 +18,7 @@ const StoreBanner = (props) => {
 
 StoreBanner.defaultProps = {
   image_alt1: 'image',
-  image_src1: '/playground_assets/google-play-badge-200h.png',
+  image_src1: process.env.PUBLIC_URL + '/playground_assets/google-play-badge-200h.png',
 }
 
 StoreBanner.propTypes = {

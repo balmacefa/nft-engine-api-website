@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.af447813.css",
-    "main.js": "/static/js/main.b69b916f.js",
-    "static/js/787.13665c7f.chunk.js": "/static/js/787.13665c7f.chunk.js",
-    "index.html": "/index.html",
-    "main.af447813.css.map": "/static/css/main.af447813.css.map",
-    "main.b69b916f.js.map": "/static/js/main.b69b916f.js.map",
-    "787.13665c7f.chunk.js.map": "/static/js/787.13665c7f.chunk.js.map"
+    "main.css": "/nfr-engine-api-website/static/css/main.af447813.css",
+    "main.js": "/nfr-engine-api-website/static/js/main.47586043.js",
+    "static/js/787.13665c7f.chunk.js": "/nfr-engine-api-website/static/js/787.13665c7f.chunk.js",
+    "index.html": "/nfr-engine-api-website/index.html",
+    "main.af447813.css.map": "/nfr-engine-api-website/static/css/main.af447813.css.map",
+    "main.47586043.js.map": "/nfr-engine-api-website/static/js/main.47586043.js.map",
+    "787.13665c7f.chunk.js.map": "/nfr-engine-api-website/static/js/787.13665c7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af447813.css",
-    "static/js/main.b69b916f.js"
+    "static/js/main.47586043.js"
   ]
 }
