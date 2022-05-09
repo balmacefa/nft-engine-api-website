@@ -8,6 +8,12 @@ import BlogPostCard2 from '../components/blog-post-card2'
 import TestimonialsCard from '../components/testimonials-card'
 import './home.css'
 
+
+const LINKS = {
+  api: 'https://rapidapi.com/hub/',
+  documentationLink: 'https://balmacefa.github.io/nft-api-engine-docs/'
+};
+
 const Home = (props) => {
   return (
     <div className="home-container">
@@ -54,7 +60,7 @@ const Home = (props) => {
             <div className="home-logo1">
               <img
                 alt="image"
-                src={process.env.PUBLIC_URL +"/playground_assets/logotype-dark.svg"}
+                src={process.env.PUBLIC_URL + "/playground_assets/logotype-dark.svg"}
                 className="home-image04"
               />
             </div>
@@ -163,8 +169,17 @@ const Home = (props) => {
               </p>
             </span>
             <div className="home-btn-group">
-              <button className="home-button button">USE API NOW</button>
-              <button className="home-button1 button">View More!</button>
+              <button className="home-button button">
+                {/* link to https://rapidapi.com/hub/ */}
+                <a href={LINKS.api} target="_blank" rel="noreferrer noopener">
+                  USE API NOW
+                </a>
+              </button>
+              <button className="home-button1 button">
+                <a href={LINKS.documentationLink} target="_blank" rel="noreferrer noopener">
+                  View Docs!
+                </a>
+              </button>
             </div>
           </div>
           <div className="home-container08 relative">
@@ -189,22 +204,22 @@ const Home = (props) => {
           <div className="home-blur-background"></div>
           <img
             alt="image"
-            src={process.env.PUBLIC_URL +"/playground_assets/turquoise-circle.svg"}
+            src={process.env.PUBLIC_URL + "/playground_assets/turquoise-circle.svg"}
             className="home-turquoise-cirble"
           />
           <img
             alt="image"
-            src={process.env.PUBLIC_URL +"/playground_assets/purple-circle.svg"}
+            src={process.env.PUBLIC_URL + "/playground_assets/purple-circle.svg"}
             className="home-purple-circle"
           />
           <img
             alt="image"
-            src={process.env.PUBLIC_URL +"/playground_assets/left.svg"}
+            src={process.env.PUBLIC_URL + "/playground_assets/left.svg"}
             className="home-left"
           />
           <img
             alt="image"
-            src={process.env.PUBLIC_URL +"/playground_assets/right.svg"}
+            src={process.env.PUBLIC_URL + "/playground_assets/right.svg"}
             className="home-right"
           />
         </div>
@@ -227,7 +242,7 @@ const Home = (props) => {
             ></StatsCard>
             <StatsCard
               number="Attempts until NFT is successfully deployed"
-              image_src={process.env.PUBLIC_URL +"/playground_assets/04.svg"}
+              image_src={process.env.PUBLIC_URL + "/playground_assets/04.svg"}
               description="The nature of the networks and technology used to create non-fungible tokens (NFTs) means that there are multiple potential points of failure. To account for this, a resilience work queue is used that attempts each step until the NFT is successfully deployed. If a job does not succeed after 10 tries, it is considered unrecoverable."
               rootClassName="stats-card-root-class-name"
             ></StatsCard>
@@ -367,7 +382,11 @@ const Home = (props) => {
                 <br></br>
                 <span className="home-text110">onPolygon Matic</span>
               </span>
-              <button className="home-button3 button">USE API</button>
+              <button className="home-button3 button">
+                <a href={LINKS.api} target="_blank" rel="noreferrer noopener">
+                  USE API NOW
+                </a>
+              </button>
             </div>
             <div className="home-container40">
               <span className="home-text111">Testnet</span>
@@ -376,7 +395,11 @@ const Home = (props) => {
                 <span className="home-text114">Requie</span>
                 <span>Requests</span>
               </span>
-              <button className="home-button4 button">Learn More</button>
+              <button className="home-button4 button">
+                <a href={LINKS.api} target="_blank" rel="noreferrer noopener">
+                  USE API NOW
+                </a>
+              </button>
             </div>
           </div>
         </div>
@@ -418,7 +441,11 @@ const Home = (props) => {
           <br></br>
           <span></span>
         </span>
-        <button className="home-button2 button">Documentación</button>
+        <button className="home-button2 button">
+          <a href={LINKS.documentationLink} target="_blank" rel="noreferrer noopener">
+            Dev Docs
+          </a>
+        </button>
         <div className="home-features">
           <FeatureCard
             text="NFTs are becoming prime uses for identities in the form of avatars. Much like passports connect individuals to a country, avatars represent memberships in communities."
@@ -427,12 +454,12 @@ const Home = (props) => {
           <FeatureCard
             text="NFTs could be employed for a range of applications. They can, for example, be used to signify ownership of digital goods like art, music, or videos, as well as any JSON structure. They can also be used to represent tangible items like automobiles and houses. NFTs can also be used to represent shares in a firm or cryptocurrency tokens.\n"
             title="High Compatibility"
-            image_src={process.env.PUBLIC_URL +"/playground_assets/02.svg"}
+            image_src={process.env.PUBLIC_URL + "/playground_assets/02.svg"}
           ></FeatureCard>
           <FeatureCard
             text="Use integrations for systems like Shopify, WooCommerce, NetSuite, and more.\nGive your most loyal customer access to premium products or request in nft forms."
             title="Prebuilt integrations\n"
-            image_src={process.env.PUBLIC_URL +"/playground_assets/03.svg"}
+            image_src={process.env.PUBLIC_URL + "/playground_assets/03.svg"}
           ></FeatureCard>
         </div>
       </div>
@@ -510,7 +537,7 @@ const Home = (props) => {
             <div className="home-container29">
               <img
                 alt="image"
-                src={process.env.PUBLIC_URL +"/playground_assets/quote-mark.svg"}
+                src={process.env.PUBLIC_URL + "/playground_assets/quote-mark.svg"}
                 className="home-image09"
               />
               <h1 className="home-text084 headline2">
@@ -614,7 +641,11 @@ const Home = (props) => {
                 <br></br>
                 <span className="home-text110">onPolygon Matic</span>
               </span>
-              <button className="home-button3 button">USE API</button>
+              <button className="home-button3 button">
+                <a href={LINKS.api} target="_blank" rel="noreferrer noopener">
+                  USE API NOW
+                </a>
+              </button>
             </div>
             <div className="home-container40">
               <span className="home-text111">Testnet</span>
@@ -623,7 +654,11 @@ const Home = (props) => {
                 <span className="home-text114">Requie</span>
                 <span>Requests</span>
               </span>
-              <button className="home-button4 button">Learn More</button>
+              <button className="home-button4 button">
+                <a href={LINKS.api} target="_blank" rel="noreferrer noopener">
+                  USE API NOW
+                </a>
+              </button>
             </div>
           </div>
         </div>
@@ -662,7 +697,11 @@ const Home = (props) => {
             </span>
             <span></span>
           </span>
-          <button className="home-button5 button">Use now</button>
+          <button className="home-button5 button">
+            <a href={LINKS.api} target="_blank" rel="noreferrer noopener">
+              USE API NOW
+            </a>
+          </button>
         </div>
       </div>
       <div className="home-feature2">
