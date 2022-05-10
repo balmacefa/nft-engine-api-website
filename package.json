@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://nftapiengine.xyz",
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.4.5",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
