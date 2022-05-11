@@ -122,21 +122,15 @@ const Home = (props) => {
         </div>
         <div className="home-gallery">
           <div className="home-container13">
-            <div className="home-container14">
-              <h1 className="home-text040">
-                <span></span>
+            <div className="home-container16">
+              <h1 className="home-text049">
                 <span className="home-text042">
                   1-
                 </span>
                 <br></br>
-                <span></span>
                 <span className="home-text045">
                   Jobs are placed in a resilient Redis queue.
                 </span>
-                <br></br>
-                <span></span>
-                <span></span>
-                <span></span>
               </h1>
             </div>
           </div>
@@ -180,7 +174,7 @@ const Home = (props) => {
           </div>
           <div className="home-container21">
             <div className="home-container22">
-              <h1 className="home-text065">
+              <h1 className="home-text049">
                 <span className="home-text066">5%</span>
                 <br></br>
                 <span className="home-text068">
@@ -188,21 +182,17 @@ const Home = (props) => {
                 </span>
               </h1>
               <span className="home-text069 headline3">
+                <br></br>
                 <span>^6^</span>
                 <br></br>
                 <span>The NFT is deployed to the blockchain.</span>
                 <br></br>
-                <span></span>
-                <br></br>
-                <span></span>
-                <br></br>
-                <span></span>
               </span>
             </div>
           </div>
           <div className="home-container23">
             <div className="home-container24">
-              <h1 className="home-text078">
+              <h1 className="home-text049">
                 <span>7&amp;</span>
                 <br></br>
                 <span>
@@ -210,7 +200,6 @@ const Home = (props) => {
                   status.
                 </span>
                 <br></br>
-                <span></span>
               </h1>
             </div>
           </div>
@@ -232,14 +221,7 @@ const Home = (props) => {
           <span></span>
         </h3>
         <h2 className="home-text025 headline2">
-          <span></span>
-          <span>The world’s most powerful and easy-to-use NFT API</span>
-          <br></br>
-          <span></span>
-          <span></span>
-          <br></br>
-          <span></span>
-          <span></span>
+        The world’s most powerful and easy-to-use NFT API
         </h2>
         <span className="home-text033">
           <span>
@@ -268,15 +250,8 @@ const Home = (props) => {
             title="High Compatibility"
             image_src={process.env.PUBLIC_URL + "/playground_assets/02.svg"}
           ></FeatureCard>
-          <FeatureCard
-            text="Use integrations for systems like Shopify, WooCommerce, NetSuite, and more.\nGive your most loyal customer access to premium products or request in nft forms."
-            title="Prebuilt integrations\n"
-            image_src={process.env.PUBLIC_URL + "/playground_assets/03.svg"}
-          ></FeatureCard>
         </div>
       </div>
-
-
 
       <div className="home-steps">
         <div className="home-container25">
@@ -353,7 +328,10 @@ const Home = (props) => {
                 className="home-image09"
               />
               <h1 className="home-text084 headline2">
-                Custom JSON structure
+                Custom JSON
+              </h1>
+              <h1 className="home-text084 headline2">
+                Structure
               </h1>
             </div>
             <div className="home-container30">

@@ -12,7 +12,7 @@ const StatsCard = (props) => {
         src={props.image_src}
         className="stats-card-image"
       />
-      <div className="stats-card-container1">
+      <div className="">
         <h1 className="stats-card-text headline4">{props.number}</h1>
         <span className="stats-card-text1 body1">{props.description}</span>
       </div>
