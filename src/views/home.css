@@ -975,7 +975,7 @@
 }
 
 .home-image08 {
-  top: 1177px;
+  bottom: -108px;
   left: -352px;
   width: 1087px;
   height: 585px;
@@ -1040,6 +1040,28 @@
   height: 695px;
   position: absolute;
   object-fit: cover;
+}
+
+/* media queries for the home-image10 */
+/* @media (max-width: 767px) */
+@media (max-width: 767px) {
+  .home-image10 {
+    top: 150px;
+    left: -55px;
+    width: 784px;
+    position: absolute;
+
+    object-fit: contain;
+  }
+
+  .home-image08 {
+    bottom: -235px;
+    left: -70px;
+    width: 520px;
+    margin: auto;
+    position: absolute;
+    object-fit: contain;
+  }
 }
 
 .home-container31 {

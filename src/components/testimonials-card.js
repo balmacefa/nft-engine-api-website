@@ -14,12 +14,15 @@ const TestimonialsCard = (props) => {
           className="testimonials-card-image"
         />
         <div className="testimonials-card-container2">
-          <span className="testimonials-card-text lead1">{props.text}</span>
-          <span className="testimonials-card-text1 subtitle1">
-            {props.text1}
-          </span>
-          <span className="testimonials-card-text2 lead2">{props.text2}</span>
+          <p className="testimonials-card-text lead1">{props.text}</p>
+          <p className="testimonials-card-text lead1">{props.text2}</p>
+          {/* text3 , 4 */}
+          <p className="testimonials-card-text lead1">{props.text3}</p>
+          <p className="testimonials-card-text lead1">{props.text4}</p>
         </div>
+        {/* <div className="testimonials-card-container2">
+          <span className="testimonials-card-text lead1">{props.text2}</span>
+        </div> */}
       </div>
     </div>
   )

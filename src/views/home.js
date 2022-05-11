@@ -328,17 +328,19 @@ const Home = (props) => {
                 className="home-image09"
               />
               <h1 className="home-text084 headline2">
-                Custom JSON
+                Alternative
               </h1>
               <h1 className="home-text084 headline2">
-                Structure
+                Usages
               </h1>
             </div>
             <div className="home-container30">
               <TestimonialsCard
-                text="Save Historical events, agreement, contract of gavideo game. \n- Air drop NFts\n- No knowledge required\n- Address splitter periodical or stream of NFTs with crypto revenue.\n- Save Historical events, agreement, contract of video game\n- NFTs can be used to represent ownership of digital goods like art, music, or videos, as well as any JSON structure."
-                text1="s"
-                text2="c"
+                text="Create a reputation system by saving historical events or agreements that will have an impact on the future."
+                text2="Sell a virtual representation of a tangible object, then deliver the physical object after the NFT is burned or transferred back to you."
+                text3="Use an NFT as a ticket to an event; if attendees are unable to attend, they can transfer or sell their tickets to others."
+                text4="Motivate your team by rewarding them for completing a task, project, or any achievement; offer someone an NFT to demonstrate their accomplishment."
+       
                 image_src={process.env.PUBLIC_URL + "/playground_assets/logo-4.svg"}
                 rootClassName="testimonials-card-root-class-name"
               ></TestimonialsCard>
