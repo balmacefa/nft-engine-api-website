@@ -1,1 +1,863 @@
-<!doctype html><html lang="en"><head><title>Landify</title><meta name="viewport" content="width=device-width,initial-scale=1"/><meta charset="utf-8"/><meta property="twitter:card" content="summary_large_image"/><style>html{line-height:1.15}body{margin:0}*{box-sizing:border-box;border-width:0;border-style:solid}div,h1,h2,h3,h4,h5,h6,li,p,pre,ul{margin:0;padding:0}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focus,[type=reset]:-moz-focus,[type=submit]:-moz-focus,button:-moz-focus{outline:1px dotted ButtonText}a{color:inherit;text-decoration:inherit}input{padding:2px 4px}img{display:block}</style><style>html{font-family:Inter;font-size:16px}body{font-weight:400;font-style:normal;text-decoration:none;text-transform:none;letter-spacing:normal;line-height:1.55;color:var(--dl-color-gray-900);background-color:var(--dl-color-gray-white)}</style><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script:wght@400&display=swap"/><link href="/nft-engine-api-website/static/css/main.4032bcfc.chunk.css" rel="stylesheet"></head><body><div id="app"></div><script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script><script>!function(e){function t(t){for(var n,i,l=t[0],f=t[1],a=t[2],c=0,s=[];c<l.length;c++)i=l[c],Object.prototype.hasOwnProperty.call(o,i)&&o[i]&&s.push(o[i][0]),o[i]=0;for(n in f)Object.prototype.hasOwnProperty.call(f,n)&&(e[n]=f[n]);for(p&&p(t);s.length;)s.shift()();return u.push.apply(u,a||[]),r()}function r(){for(var e,t=0;t<u.length;t++){for(var r=u[t],n=!0,l=1;l<r.length;l++){var f=r[l];0!==o[f]&&(n=!1)}n&&(u.splice(t--,1),e=i(i.s=r[0]))}return e}var n={},o={1:0},u=[];function i(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.m=e,i.c=n,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)i.d(r,n,function(t){return e[t]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/nft-engine-api-website/";var l=this.webpackJsonplandify=this.webpackJsonplandify||[],f=l.push.bind(l);l.push=t,l=l.slice();for(var a=0;a<l.length;a++)t(l[a]);var p=f;r()}([])</script><script src="/nft-engine-api-website/static/js/2.148b6fa1.chunk.js"></script><script src="/nft-engine-api-website/static/js/main.005a950c.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+				<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		
+            
+                        <link rel="shortcut icon" type="image/x-icon" href="./wp-content/uploads/2022/05/favicon-3.png">
+            <link rel="apple-touch-icon" href="./wp-content/uploads/2022/05/favicon-3.png">
+        
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="./xmlrpc.php">
+
+	<title>NFT API Engine | Fully Automated NFT API 🍜🐋</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="NFT API Engine &raquo; Feed" href="./feed/index.html">
+<link rel="alternate" type="application/rss+xml" title="NFT API Engine &raquo; Comments Feed" href="./comments/feed/index.html">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="wpo_min-header-0-css" href="./wp-content/cache/wpo-minify/1652675012/assets/wpo-minify-header-a994f9e8.min.css" type="text/css" media="all">
+<script type="text/javascript" id="wpo_min-header-0-js-extra">
+/* <![CDATA[ */
+var LS_Meta = {"v":"7.2.1","fixGSAP":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./wp-content/cache/wpo-minify/1652675012/assets/wpo-minify-header-ae1530ec.min.js" id="wpo_min-header-0-js"></script>
+<meta name="generator" content="Powered by LayerSlider 7.2.1 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress.">
+<!-- LayerSlider updates and docs at: https://layerslider.com -->
+<link rel="https://api.w.org/" href="./wp-json/index.html">
+<link rel="alternate" type="application/json" href="./wp-json/wp/v2/pages/9/index.html">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="./xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="./index.html">
+<link rel="shortlink" href="./index.html">
+<link rel="alternate" type="application/json+oembed" href="./wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2F">
+<link rel="alternate" type="text/xml+oembed" href="./wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2F&#038;format=xml">
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<meta name="generator" content="Powered by Slider Revolution 6.5.21 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+<noscript><style>.wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+</head>
+
+<body class="home page-template page-template-full_width page-template-full_width-php page page-id-9 bridge-core-3.0.2 qodef-qi--no-touch qi-addons-for-elementor-1.5.3  qode-title-hidden qode_grid_1300 footer_responsive_adv qode-content-sidebar-responsive qode-overridden-elementors-fonts qode_disabled_responsive_button_padding_change qode-theme-ver-28.8 qode-theme-bridge disabled_footer_top disabled_footer_bottom wpb-js-composer js-comp-ver-6.9.0 vc_responsive elementor-default elementor-kit-6 elementor-page elementor-page-9" itemscope itemtype="http://schema.org/WebPage">
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div class="wrapper">
+	<div class="wrapper_inner">
+
+    
+		<!-- Google Analytics start -->
+				<!-- Google Analytics end -->
+
+		
+	<header class=" scroll_header_top_area light regular transparent page_header">
+    <div class="header_inner clearfix">
+                <div class="header_top_bottom_holder">
+            
+            <div class="header_bottom clearfix" style=" background-color:rgba(22, 22, 22, 0);">
+                
+                            <div class="header_inner_left">
+                                									<div class="mobile_menu_button">
+		<span>
+			<i class="qode_icon_font_awesome fa fa-bars "></i>		</span>
+	</div>
+                                <div class="logo_wrapper">
+	<div class="q_logo">
+		<a itemprop="url" href="./index.html">
+             <img itemprop="image" class="normal" src="./wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 			 <img itemprop="image" class="light" src="./wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 			 <img itemprop="image" class="dark" src="./wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 			 <img itemprop="image" class="sticky" src="./wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 			 <img itemprop="image" class="mobile" src="./wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 					</a>
+	</div>
+	</div>                                                            </div>
+                                                                    <div class="header_inner_right">
+                                        <div class="side_menu_button_wrapper right">
+                                                                                                                                    <div class="side_menu_button">
+                                                                                                                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                
+                                <nav class="main_menu drop_down center">
+                                    <ul id="menu-main-menu" class="">
+<li id="nav-menu-item-696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item active narrow"><a href="./index.html" class=" current "><i class="menu_icon blank fa"></i><span>Home<span class="underline_dash"></span></span><span class="plus"></span></a></li>
+<li id="nav-menu-item-699" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="./usage/index.html" class=""><i class="menu_icon blank fa"></i><span>Usage<span class="underline_dash"></span></span><span class="plus"></span></a></li>
+<li id="nav-menu-item-698" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="./our-services/index.html" class=""><i class="menu_icon blank fa"></i><span>Services<span class="underline_dash"></span></span><span class="plus"></span></a></li>
+</ul>                                </nav>
+                                							    <nav class="mobile_menu">
+	<ul id="menu-main-menu-1" class="">
+<li id="mobile-menu-item-696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item active">
+<a href="./index.html" class=" current "><span>Home</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+</li>
+<li id="mobile-menu-item-699" class="menu-item menu-item-type-post_type menu-item-object-page ">
+<a href="./usage/index.html" class=""><span>Usage</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+</li>
+<li id="mobile-menu-item-698" class="menu-item menu-item-type-post_type menu-item-object-page ">
+<a href="./our-services/index.html" class=""><span>Services</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+</li>
+</ul></nav>                                                </div>
+            </div>
+        </div>
+</header>	<a id="back_to_top" href="#">
+        <span class="fa-stack">
+            <span aria-hidden="true" class="qode_icon_font_elegant arrow_up "></span>        </span>
+	</a>
+	
+	
+    
+    	
+    
+    <div class="content ">
+        <div class="content_inner  ">
+    					<div class="full_width">
+	<div class="full_width_inner">
+												<div data-elementor-type="wp-page" data-elementor-id="9" class="elementor elementor-9">
+									<section class="elementor-section elementor-top-section elementor-element elementor-element-e77dfca elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="e77dfca" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;none&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-89c6fb8 animated-fast elementor-invisible" data-id="89c6fb8" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:500}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-e3f9011 elementor-widget elementor-widget-image" data-id="e3f9011" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>												<img width="593" height="538" src="./wp-content/uploads/2021/05/services-image-1a.jpg" class="attachment-full size-full" alt="c" loading="lazy" srcset="./wp-content/uploads/2021/05/services-image-1a.jpg 593w, ./wp-content/uploads/2021/05/services-image-1a-300x272.jpg 300w" sizes="(max-width: 593px) 100vw, 593px">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b7319bb" data-id="b7319bb" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1bbe5c9 elementor-widget elementor-widget-heading" data-id="1bbe5c9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style>
+<h6 class="elementor-heading-title elementor-size-default">NFT API ENGINE</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-550cbbf elementor-widget elementor-widget-spacer" data-id="550cbbf" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.e-container.e-container--row .elementor-spacer-inner{width:var(--spacer-size)}.e-container.e-container--column .elementor-spacer-inner,.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}</style>		<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a8e819c animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="a8e819c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Fully Automated
+
+NFT API 🍜🐋</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-53f8955 elementor-widget elementor-widget-spacer" data-id="53f8955" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-82f7f0f elementor-invisible elementor-widget elementor-widget-text-editor" data-id="82f7f0f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<ol>
+<li>With just one API call, you can mint and deploy an NFT using your own custom data to the Polygon Matic Network (More soon)<span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Sans-serif; font-weight: var( --e-global-typography-text-font-weight );">.</span>
+</li>
+<li>The API manages all technical aspects. No crypto required!</li>
+<li>Our resilient work queue ensures that your NFT is successfully deployed.</li>
+</ol>
+<p>So why wait? Get started today!</p>						</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-11e87ad elementor-section-boxed elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="11e87ad" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2691cbb" data-id="2691cbb" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-2aa6954 elementor-widget elementor-widget-bridge_button" data-id="2aa6954" data-element_type="widget" data-widget_type="bridge_button.default">
+				<div class="elementor-widget-container">
+			<a itemprop="url" target="_self" class="qbutton  default">USE API NOW</a>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-25331a2" data-id="25331a2" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-504df30 elementor-widget elementor-widget-bridge_button" data-id="504df30" data-element_type="widget" data-widget_type="bridge_button.default">
+				<div class="elementor-widget-container">
+			<a itemprop="url" href="https://docs.nftapiengine.xyz/" target="_self" class="qbutton  default">dev docs</a>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-26d272a elementor-section-boxed elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="26d272a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c37460f" data-id="c37460f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f5320c0 elementor-widget elementor-widget-bridge_clients" data-id="f5320c0" data-element_type="widget" data-widget_type="bridge_clients.default">
+				<div class="elementor-widget-container">
+			
+        <div class="qode_clients clearfix two_columns qode_clients_switch_images qode_clients_switch_fade qode_clients_separators_disabled">
+
+            <div class="qode_client_holder"><div class="qode_client_holder_inner">
+<div class="qode_client_image_holder"><a itemprop="url" href="https://polygon.technology/" target="_blank"><img itemprop="image" class="qode_client_main_image" src="./wp-content/uploads/2022/05/polygon-logo.hover_.png" alt=""><img itemprop="image" class="qode_client_hover_image" src="./wp-content/uploads/2022/05/polygon-logo.png" alt=""></a></div>
+<div class="qode_client_image_hover"></div>
+</div></div>
+<div class="qode_client_holder"><div class="qode_client_holder_inner">
+<div class="qode_client_image_holder"><a itemprop="url" href="https://rapidapi.com/" target="_blank"><img itemprop="image" class="qode_client_main_image" src="./wp-content/uploads/2022/05/rapid-api.hover_.png" alt=""><img itemprop="image" class="qode_client_hover_image" src="./wp-content/uploads/2022/05/rapid-api.png" alt=""></a></div>
+<div class="qode_client_image_hover"></div>
+</div></div>
+        </div>
+
+        		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2d05e51 elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="2d05e51" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f229a30" data-id="f229a30" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-ab26ed0 elementor-widget elementor-widget-heading" data-id="ab26ed0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Why choose us &
+our benefits</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-82bd88d elementor-widget elementor-widget-spacer" data-id="82bd88d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7988c54" data-id="7988c54" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-16770d4 animated-slow elementor-invisible elementor-widget elementor-widget-bridge_icon_text" data-id="16770d4" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="bridge_icon_text.default">
+				<div class="elementor-widget-container">
+			<div class="q_icon_with_title tiny custom_icon_image ">
+<div class="icon_holder q_icon_animation" style=" "><img itemprop="image" src="./wp-content/uploads/2021/05/icon-1.jpg" alt=""></div>
+<div class="icon_text_holder"><div class="icon_text_inner">
+<h4 class="icon_title" style="">Fully automated</h4>
+<p style="">With just one API call, you can mint and deploy an NFT using your own custom data.</p>
+</div></div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2238dfb elementor-widget elementor-widget-spacer" data-id="2238dfb" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e5f014e animated-slow elementor-invisible elementor-widget elementor-widget-bridge_icon_text" data-id="e5f014e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:100}" data-widget_type="bridge_icon_text.default">
+				<div class="elementor-widget-container">
+			<div class="q_icon_with_title tiny custom_icon_image ">
+<div class="icon_holder " style=" "><img itemprop="image" src="./wp-content/uploads/2021/05/icon-3.jpg" alt=""></div>
+<div class="icon_text_holder"><div class="icon_text_inner">
+<h4 class="icon_title" style="">No crypto required</h4>
+<p style="">You don't need any cryptocurrency to use our API.</p>
+</div></div>
+</div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1752468" data-id="1752468" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-12c0c94 elementor-invisible elementor-widget elementor-widget-bridge_icon_text" data-id="12c0c94" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:200}" data-widget_type="bridge_icon_text.default">
+				<div class="elementor-widget-container">
+			<div class="q_icon_with_title tiny custom_icon_image ">
+<div class="icon_holder " style=" "><img itemprop="image" src="./wp-content/uploads/2021/05/icon-1.jpg" alt=""></div>
+<div class="icon_text_holder"><div class="icon_text_inner">
+<h4 class="icon_title" style="">We're highly reliable</h4>
+<p style="">Our work queue ensures that your NFT is successfully deployed.</p>
+</div></div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9ac98f3 elementor-widget elementor-widget-spacer" data-id="9ac98f3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-687a27c animated-slow elementor-invisible elementor-widget elementor-widget-bridge_icon_text" data-id="687a27c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="bridge_icon_text.default">
+				<div class="elementor-widget-container">
+			<div class="q_icon_with_title tiny custom_icon_image ">
+<div class="icon_holder " style=" "><img itemprop="image" src="./wp-content/uploads/2021/05/icon-4.jpg" alt=""></div>
+<div class="icon_text_holder"><div class="icon_text_inner">
+<h4 class="icon_title" style="">No hassle</h4>
+<p style="">We're the perfect choice for businesses who want to get started with NFTs without the hassle of complex in-house development; wallet management, smart contracts...</p>
+</div></div>
+</div>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-ef9a071 elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="ef9a071" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-c32a3af" data-id="c32a3af" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1c610c0 elementor-widget elementor-widget-image" data-id="1c610c0" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="897" height="805" src="./wp-content/uploads/2021/05/home-image-1.png" class="attachment-full size-full" alt="h" loading="lazy" srcset="./wp-content/uploads/2021/05/home-image-1.png 897w, ./wp-content/uploads/2021/05/home-image-1-300x269.png 300w, ./wp-content/uploads/2021/05/home-image-1-768x689.png 768w, ./wp-content/uploads/2021/05/home-image-1-700x628.png 700w" sizes="(max-width: 897px) 100vw, 897px">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d91787e" data-id="d91787e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f7f245b elementor-widget elementor-widget-heading" data-id="f7f245b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Resilient Redis queue</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-09394c9 elementor-widget elementor-widget-spacer" data-id="09394c9" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0e586a3 elementor-invisible elementor-widget elementor-widget-heading" data-id="0e586a3" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">The Job queue</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-882852a elementor-widget elementor-widget-spacer" data-id="882852a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-500a565 animated-slow elementor-invisible elementor-widget elementor-widget-text-editor" data-id="500a565" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<ol>
+<li><div class="home-container10"><div class="home-container12"><div class="stats-card-container stats-card-root-class-name "><div class="">Because of the nature of the networks and technology used to create non-fungible tokens (NFTs), there are multiple potential points of failure.</div></div></div></div></li>
+<li>To account for this, a resilience work queue is employed, and each step is attempted until the NFT is successfully deployed. If a job fails after ten attempts, it is called unrecoverable.</li>
+</ol>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-daa4c4f elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="daa4c4f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-8e228e4 animated-fast elementor-invisible" data-id="8e228e4" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;zoomIn&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-051c44e elementor-widget elementor-widget-heading" data-id="051c44e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">01</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dcc868b elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="dcc868b" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-divider{--divider-border-style:none;--divider-border-width:1px;--divider-color:#2c2c2c;--divider-icon-size:20px;--divider-element-spacing:10px;--divider-pattern-height:24px;--divider-pattern-size:20px;--divider-pattern-url:none;--divider-pattern-repeat:repeat-x}.elementor-widget-divider .elementor-divider{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-divider .elementor-divider__text{font-size:15px;line-height:1;max-width:95%}.elementor-widget-divider .elementor-divider__element{margin:0 var(--divider-element-spacing);-ms-flex-negative:0;flex-shrink:0}.elementor-widget-divider .elementor-icon{font-size:var(--divider-icon-size)}.elementor-widget-divider .elementor-divider-separator{display:-webkit-box;display:-ms-flexbox;display:flex;margin:0;direction:ltr}.elementor-widget-divider--view-line_icon .elementor-divider-separator,.elementor-widget-divider--view-line_text .elementor-divider-separator{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.elementor-widget-divider--view-line_icon .elementor-divider-separator:after,.elementor-widget-divider--view-line_icon .elementor-divider-separator:before,.elementor-widget-divider--view-line_text .elementor-divider-separator:after,.elementor-widget-divider--view-line_text .elementor-divider-separator:before{display:block;content:"";border-bottom:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;border-top:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;-ms-flex-negative:100;flex-shrink:100}.elementor-widget-divider--element-align-left .elementor-divider-separator:before{content:none}.elementor-widget-divider--element-align-left .elementor-divider__element{margin-left:0}.elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0;-ms-flex-negative:100;flex-shrink:100}.elementor-widget-divider--element-align-right .elementor-divider-separator:after{content:none}.elementor-widget-divider--element-align-right .elementor-divider__element{margin-right:0}.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator{border-top:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--separator-type-pattern{--divider-border-style:none}.elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,.elementor-widget-divider--separator-type-pattern:not([class*=elementor-widget-divider--view]) .elementor-divider-separator{width:100%;min-height:var(--divider-pattern-height);-webkit-mask-size:var(--divider-pattern-size) 100%;mask-size:var(--divider-pattern-size) 100%;-webkit-mask-repeat:var(--divider-pattern-repeat);mask-repeat:var(--divider-pattern-repeat);background-color:var(--divider-color);-webkit-mask-image:var(--divider-pattern-url);mask-image:var(--divider-pattern-url)}.elementor-widget-divider--no-spacing{--divider-pattern-size:auto}.elementor-widget-divider--bg-round{--divider-pattern-repeat:round}.rtl .elementor-widget-divider .elementor-divider__text{direction:rtl}</style>		<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-1b644ae elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="1b644ae" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d24a407" data-id="d24a407" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-9937173 elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="9937173" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="50" height="49" src="./wp-content/uploads/2021/05/icon-5.jpg" class="attachment-full size-full" alt="f" loading="lazy">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4e594d0" data-id="4e594d0" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f508775 elementor-widget elementor-widget-heading" data-id="f508775" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Jobs are placed in a resilient Redis queue</h4>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-26517fb animated-fast elementor-invisible" data-id="26517fb" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:100}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-32737ed elementor-widget elementor-widget-heading" data-id="32737ed" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">02</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b344834 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="b344834" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-6582fdc elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="6582fdc" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-21fefde" data-id="21fefde" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-c535110 elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="c535110" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="48" height="46" src="./wp-content/uploads/2021/05/icon-6.jpg" class="attachment-full size-full" alt="" loading="lazy">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-24ca498" data-id="24ca498" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-d0ca586 elementor-widget elementor-widget-heading" data-id="d0ca586" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">A smart contract is deployed
+for each collection</h4>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1860abc animated-fast elementor-invisible" data-id="1860abc" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:200}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-6081e67 elementor-widget elementor-widget-heading" data-id="6081e67" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">03</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-aab933a elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="aab933a" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-35793bf elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="35793bf" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a125047" data-id="a125047" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-da24bc9 elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="da24bc9" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="49" height="50" src="./wp-content/uploads/2021/05/icon-4.jpg" class="attachment-full size-full" alt="j" loading="lazy">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9ec34dc" data-id="9ec34dc" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-befc7bf elementor-widget elementor-widget-heading" data-id="befc7bf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Data is uploaded to IPFS in base64 format</h4>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2c03de7 animated-fast elementor-invisible" data-id="2c03de7" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:300}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-654650b elementor-widget elementor-widget-heading" data-id="654650b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">04</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-62e6fc5 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="62e6fc5" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-ad25415 elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="ad25415" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-8b5af88" data-id="8b5af88" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f491c9a elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="f491c9a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="49" height="49" src="./wp-content/uploads/2021/05/icon-7.jpg" class="attachment-full size-full" alt="f" loading="lazy">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-849f8bf" data-id="849f8bf" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-6b30f03 elementor-widget elementor-widget-heading" data-id="6b30f03" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">The IPFS results are included in the NFT Json Metadata</h4>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<div class="elementor-element elementor-element-f878f4d elementor-widget elementor-widget-spacer" data-id="f878f4d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-61e2acc elementor-widget elementor-widget-text-editor" data-id="61e2acc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>As specified by your custom path. (Internally is done by lodash _.set</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b694009 elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="b694009" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6cca1ad animated-fast elementor-invisible" data-id="6cca1ad" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:400}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b8aec4c elementor-widget elementor-widget-heading" data-id="b8aec4c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">05</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8b8fb6b elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="8b8fb6b" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-31625e0 elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="31625e0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3e21390" data-id="3e21390" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-28f2d64 elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="28f2d64" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="50" height="49" src="./wp-content/uploads/2021/05/icon-5.jpg" class="attachment-full size-full" alt="f" loading="lazy">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d4224d8" data-id="d4224d8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b676d69 elementor-widget elementor-widget-heading" data-id="b676d69" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">The compiled NFT Json Metadata is uploaded to IPFS</h4>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<div class="elementor-element elementor-element-224b2e5 elementor-widget elementor-widget-spacer" data-id="224b2e5" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-251b9bc animated-fast elementor-invisible" data-id="251b9bc" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:500}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-6459974 elementor-widget elementor-widget-heading" data-id="6459974" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">06</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-eb19a95 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="eb19a95" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-8e7fa60 elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="8e7fa60" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5c03e27" data-id="5c03e27" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7492074 elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="7492074" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="58" height="61" src="./wp-content/uploads/2021/05/icon-8.jpg" class="attachment-full size-full" alt="" loading="lazy">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-602c1e9" data-id="602c1e9" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b334334 elementor-widget elementor-widget-heading" data-id="b334334" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">The NFT is deployed to the blockchain.</h4>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2e19299 elementor-invisible" data-id="2e19299" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;zoomInDown&quot;,&quot;animation_delay&quot;:600}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-683b3ba elementor-widget elementor-widget-heading" data-id="683b3ba" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">07</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1039faa elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="1039faa" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-dcf8d14 elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="dcf8d14" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a2fbdcd" data-id="a2fbdcd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-eee99b2 elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="eee99b2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="52" height="48" src="./wp-content/uploads/2021/05/icon-2.jpg" class="attachment-full size-full" alt="d" loading="lazy">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-856a999" data-id="856a999" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-c7bf215 elementor-widget elementor-widget-heading" data-id="c7bf215" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Webhook is used to notify the user of the job's stages and status</h4>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-05bda08 elementor-section-full_width elementor-section-height-default elementor-section-height-default parallax_section_no qode_elementor_container_no" data-id="05bda08" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fe5fe57" data-id="fe5fe57" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<section class="elementor-section elementor-inner-section elementor-element elementor-element-3aeca2b elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="3aeca2b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-dec96f8" data-id="dec96f8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-5de1adb elementor-widget elementor-widget-heading" data-id="5de1adb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">NFT platform</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e52e191 elementor-widget elementor-widget-spacer" data-id="e52e191" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b6be486 elementor-widget elementor-widget-heading" data-id="b6be486" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Alternative
+Usages of NFTs</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-467547a elementor-widget elementor-widget-spacer" data-id="467547a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-59bcaa4 elementor-widget elementor-widget-text-editor" data-id="59bcaa4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<ul>
+<li>Create a reputation system by saving historical events or agreements that will have an impact on the future.</li>
+<li>Sell a virtual representation of a tangible object, then deliver the physical object after the NFT is burned or transferred back to you.</li>
+<li>Use an NFT as a ticket to an event; if attendees are unable to attend, they can transfer or sell their tickets to others.</li>
+<li>Motivate your team by rewarding them for completing a task, project, or any achievement; offer someone an NFT to demonstrate their accomplishment.</li>
+</ul>						</div>
+				</div>
+				<div class="elementor-element elementor-element-956a64e elementor-widget elementor-widget-spacer" data-id="956a64e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-aeba5e2 elementor-widget elementor-widget-bridge_button" data-id="aeba5e2" data-element_type="widget" data-widget_type="bridge_button.default">
+				<div class="elementor-widget-container">
+			<a itemprop="url" target="_self" class="qbutton  default">Read more</a>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-58a0b17 elementor-hidden-tablet elementor-hidden-phone" data-id="58a0b17" data-element_type="column">
+			<div class="elementor-widget-wrap">
+									</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+							</div>
+												 
+												</div>
+	</div>
+				
+	</div>
+</div>
+
+
+
+	<footer>
+		<div class="footer_inner clearfix">
+				<div class="footer_top_holder">
+            			<div class="footer_top">
+								<div class="container">
+					<div class="container_inner">
+																	<div class="four_columns clearfix">
+								<div class="column1 footer_col1">
+									<div class="column_inner">
+										<div id="media_image-2" class="widget widget_media_image"><img width="84" height="17" src="./wp-content/uploads/2021/05/footer-logo.png" class="image wp-image-37  attachment-full size-full" alt="e" loading="lazy" style="max-width: 100%; height: auto;"></div>
+<div class="widget qode_separator_widget" style="margin-bottom: 13px;"></div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget">
+<p>Lorem ipsum dolor sit amet, consyect etur<br>
+adipiscing elit. Quisque actraqum nunc no<br>
+dolor sit amet augue dolor. </p>
+</div>
+		</div>
+<div class="widget qode_separator_widget" style="margin-bottom: 20px;"></div>
+<span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://twitter.com/QodeInteractive" target="_blank"><i class="qode_icon_font_awesome fa fa-twitter  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.facebook.com/QodeInteractive/" target="_blank"><i class="qode_icon_font_awesome fa fa-facebook  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.pinterest.com/qodeinteractive/_created/" target="_blank"><i class="qode_icon_font_awesome fa fa-pinterest  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.youtube.com/channel/UC-h62vMXD5aZV5zAULD-SuA" target="_blank"><i class="qode_icon_font_awesome fa fa-youtube  simple_social" style="color: #fff;font-size: 18px;"></i></a></span>									</div>
+								</div>
+								<div class="column2 footer_col2">
+									<div class="column_inner">
+										<div id="text-5" class="widget widget_text">
+<h5>Contact Info</h5>			<div class="textwidget"></div>
+		</div>
+<div class="widget qode_icon_with_text_widget"><div class="q_icon_with_title tiny normal_icon qode-iwt-content-alignment-left ">
+<div class="icon_holder " style=" "><span data-icon-type="normal" style="font-size: 20px;" class="qode_iwt_icon_holder q_font_awsome_icon fa-lg  "><i class="qode_icon_font_awesome fa fa-home qode_iwt_icon_element" style="color: #ffffff;"></i></span></div>
+<div class="icon_text_holder"><div class="icon_text_inner">
+<h1 class="icon_title" style=""></h1>
+<p style=""></p>
+<a itemprop="url" class="icon_with_title_link" href="https://www.google.com/maps/@44.8130488,20.4586447,15z?hl=en" target="_blank" style="color: #737373;">198 West 21th Street, Suite 721 New York, NY 10010</a>
+</div></div>
+</div></div>
+<div class="widget qode_icon_with_text_widget"><div class="q_icon_with_title tiny normal_icon qode-iwt-content-alignment-left ">
+<div class="icon_holder " style=" "><span data-icon-type="normal" style="" class="qode_iwt_icon_holder q_font_awsome_icon fa-lg  "><i class="qode_icon_font_awesome fa fa-envelope-open qode_iwt_icon_element" style="color: #ffffff;"></i></span></div>
+<div class="icon_text_holder"><div class="icon_text_inner">
+<h1 class="icon_title" style=""></h1>
+<p style=""></p>
+<a itemprop="url" class="icon_with_title_link" href="mailto:email@email.com" target="_self">email@email.com</a>
+</div></div>
+</div></div>
+<div class="widget qode_icon_with_text_widget"><div class="q_icon_with_title tiny normal_icon qode-iwt-content-alignment-left ">
+<div class="icon_holder " style=" "><span data-icon-type="normal" style="font-size: 20px;" class="qode_iwt_icon_holder q_font_awsome_icon fa-lg  "><i class="qode_icon_font_awesome fa fa-mobile qode_iwt_icon_element" style="color: #ffffff;"></i></span></div>
+<div class="icon_text_holder"><div class="icon_text_inner">
+<h1 class="icon_title" style=""></h1>
+<p style=""></p>
+<a itemprop="url" class="icon_with_title_link" href="tel:+8801010000000" target="_self">+88 (0) 101 0000 000</a>
+</div></div>
+</div></div>									</div>
+								</div>
+								<div class="column3 footer_col3">
+									<div class="column_inner">
+										<div id="qode_twitter_widget-2" class="widget widget_qode_twitter_widget">It seems that you haven&#039;t connected with your Twitter account</div>									</div>
+								</div>
+								<div class="column4 footer_col4">
+									<div class="column_inner">
+										<div id="text-6" class="widget widget_text">
+<h5>Support &#038; Downloads</h5>			<div class="textwidget">
+<p>Quisque actraqum nunc no dolor sit amet augue dolor. Lorem ipsum dolor sit amet, consyect etur adipiscing elit.</p>
+</div>
+		</div>
+<div class="widget qode_separator_widget" style="margin-bottom: 31px;"></div>
+<div id="media_image-5" class="widget widget_media_image"><img width="139" height="42" src="./wp-content/uploads/2021/05/footer-image-1.png" class="image wp-image-216  attachment-full size-full" alt="c" loading="lazy" style="max-width: 100%; height: auto;"></div>
+<div id="media_image-6" class="widget widget_media_image"><img width="139" height="42" src="./wp-content/uploads/2021/05/footer-image-2.png" class="image wp-image-217  attachment-full size-full" alt="d" loading="lazy" style="max-width: 100%; height: auto;"></div>									</div>
+								</div>
+							</div>
+															</div>
+				</div>
+							</div>
+					</div>
+							<div class="footer_bottom_holder">
+                									<div class="footer_bottom">
+							<div class="textwidget">
+<p class="qode-footer-copyright">Copyright @ <a href="https://qodeinteractive.com/" target="_blank" rel="nofollow noopener">Qode Interactive 2021</a></p>
+</div>
+					</div>
+								</div>
+				</div>
+	</footer>
+		
+</div>
+</div>
+
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<link rel="stylesheet" id="wpo_min-footer-0-css" href="./wp-content/cache/wpo-minify/1652675012/assets/wpo-minify-footer-8b2816cc.min.css" type="text/css" media="all">
+<script type="text/javascript" id="mediaelement-js-extra">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="wpo_min-footer-0-js-extra">
+/* <![CDATA[ */
+var qodefQiAddonsGlobal = {"vars":{"adminBarHeight":0,"iconArrowLeft":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 34.2 32.3\" xml:space=\"preserve\" style=\"stroke-width: 2;\"><line x1=\"0.5\" y1=\"16\" x2=\"33.5\" y2=\"16\"\/><line x1=\"0.3\" y1=\"16.5\" x2=\"16.2\" y2=\"0.7\"\/><line x1=\"0\" y1=\"15.4\" x2=\"16.2\" y2=\"31.6\"\/><\/svg>","iconArrowRight":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 34.2 32.3\" xml:space=\"preserve\" style=\"stroke-width: 2;\"><line x1=\"0\" y1=\"16\" x2=\"33\" y2=\"16\"\/><line x1=\"17.3\" y1=\"0.7\" x2=\"33.2\" y2=\"16.5\"\/><line x1=\"17.3\" y1=\"31.6\" x2=\"33.5\" y2=\"15.4\"\/><\/svg>","iconClose":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 9.1 9.1\" xml:space=\"preserve\"><g><path d=\"M8.5,0L9,0.6L5.1,4.5L9,8.5L8.5,9L4.5,5.1L0.6,9L0,8.5L4,4.5L0,0.6L0.6,0L4.5,4L8.5,0z\"\/><\/g><\/svg>"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./wp-content/cache/wpo-minify/1652675012/assets/wpo-minify-footer-a12b5180.min.js" id="wpo_min-footer-0-js"></script>
+<script type="text/javascript" src="./wp-content/cache/wpo-minify/1652675012/assets/wpo-minify-footer-74d10fea.min.js" id="wpo_min-footer-1-js"></script>
+<script type="text/javascript" src="./wp-includes/js/mediaelement/wp-mediaelement.min.js" id="wp-mediaelement-js"></script>
+<script type="text/javascript" id="wpo_min-footer-3-js-extra">
+/* <![CDATA[ */
+var QodeAdminAjax = {"ajaxurl":".\/wp-admin\/admin-ajax.php"};
+var qodeGlobalVars = {"vars":{"qodeAddingToCartLabel":"Adding to Cart...","page_scroll_amount_for_sticky":""}};
+var vcData = {"currentTheme":{"slug":"bridge"}};
+var qodeLike = {"ajaxurl":".\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./wp-content/cache/wpo-minify/1652675012/assets/wpo-minify-footer-4e31d896.min.js" id="wpo_min-footer-3-js"></script>
+<script type="text/javascript" src="./wp-content/cache/wpo-minify/1652675012/assets/wpo-minify-footer-7df13ad9.min.js" id="wpo_min-footer-4-js"></script>
+</body>
+</html>
