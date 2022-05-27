@@ -1,153 +1,879 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8">
-	
-				<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-		
-            
-                        <link rel="shortcut icon" type="image/x-icon" href="./../wp-content/uploads/2022/05/favicon-3.png">
-            <link rel="apple-touch-icon" href="./../wp-content/uploads/2022/05/favicon-3.png">
-        
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="./../xmlrpc.php">
-
-	<title>NFT API Engine | Usage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link rel="shortcut icon" type="image/x-icon" href="./../wp-content/uploads/2022/05/favicon-3.png">
+<link rel="apple-touch-icon" href="./../wp-content/uploads/2022/05/favicon-3.png">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="./../xmlrpc.php">
+<link media="all" href="./../wp-content/cache/autoptimize/css/autoptimize_2034824ae87578dad82cb29d77217eab.css" rel="stylesheet">
+<title>NFT API Engine | Usage</title>
 <meta name="robots" content="max-image-preview:large">
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//s.w.org">
 <link rel="alternate" type="application/rss+xml" title="NFT API Engine &raquo; Feed" href="./../feed/index.html">
-<link rel="alternate" type="application/rss+xml" title="NFT API Engine &raquo; Comments Feed" href="./../comments/feed/index.html">
+<link rel="alternate" type="application/rss+xml" title="NFT API Engine &raquo; Comments Feed" href="./../comments/feed/index.html"> <script defer src="data:text/javascript;base64,CndpbmRvdy5fd3BlbW9qaVNldHRpbmdzID0geyJiYXNlVXJsIjoiaHR0cHM6XC9cL3Mudy5vcmdcL2ltYWdlc1wvY29yZVwvZW1vamlcLzE0LjAuMFwvNzJ4NzJcLyIsImV4dCI6Ii5wbmciLCJzdmdVcmwiOiJodHRwczpcL1wvcy53Lm9yZ1wvaW1hZ2VzXC9jb3JlXC9lbW9qaVwvMTQuMC4wXC9zdmdcLyIsInN2Z0V4dCI6Ii5zdmciLCJzb3VyY2UiOnsiY29uY2F0ZW1vamkiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3dwLWluY2x1ZGVzXC9qc1wvd3AtZW1vamktcmVsZWFzZS5taW4uanM/dmVyPTYuMCJ9fTsKLyohIFRoaXMgZmlsZSBpcyBhdXRvLWdlbmVyYXRlZCAqLwohZnVuY3Rpb24oZSxhLHQpe3ZhciBuLHIsbyxpPWEuY3JlYXRlRWxlbWVudCgiY2FudmFzIikscD1pLmdldENvbnRleHQmJmkuZ2V0Q29udGV4dCgiMmQiKTtmdW5jdGlvbiBzKGUsdCl7dmFyIGE9U3RyaW5nLmZyb21DaGFyQ29kZSxlPShwLmNsZWFyUmVjdCgwLDAsaS53aWR0aCxpLmhlaWdodCkscC5maWxsVGV4dChhLmFwcGx5KHRoaXMsZSksMCwwKSxpLnRvRGF0YVVSTCgpKTtyZXR1cm4gcC5jbGVhclJlY3QoMCwwLGkud2lkdGgsaS5oZWlnaHQpLHAuZmlsbFRleHQoYS5hcHBseSh0aGlzLHQpLDAsMCksZT09PWkudG9EYXRhVVJMKCl9ZnVuY3Rpb24gYyhlKXt2YXIgdD1hLmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3Quc3JjPWUsdC5kZWZlcj10LnR5cGU9InRleHQvamF2YXNjcmlwdCIsYS5nZXRFbGVtZW50c0J5VGFnTmFtZSgiaGVhZCIpWzBdLmFwcGVuZENoaWxkKHQpfWZvcihvPUFycmF5KCJmbGFnIiwiZW1vamkiKSx0LnN1cHBvcnRzPXtldmVyeXRoaW5nOiEwLGV2ZXJ5dGhpbmdFeGNlcHRGbGFnOiEwfSxyPTA7cjxvLmxlbmd0aDtyKyspdC5zdXBwb3J0c1tvW3JdXT1mdW5jdGlvbihlKXtpZighcHx8IXAuZmlsbFRleHQpcmV0dXJuITE7c3dpdGNoKHAudGV4dEJhc2VsaW5lPSJ0b3AiLHAuZm9udD0iNjAwIDMycHggQXJpYWwiLGUpe2Nhc2UiZmxhZyI6cmV0dXJuIHMoWzEyNzk4Nyw2NTAzOSw4MjA1LDk4OTUsNjUwMzldLFsxMjc5ODcsNjUwMzksODIwMyw5ODk1LDY1MDM5XSk/ITE6IXMoWzU1MzU2LDU2ODI2LDU1MzU2LDU2ODE5XSxbNTUzNTYsNTY4MjYsODIwMyw1NTM1Niw1NjgxOV0pJiYhcyhbNTUzNTYsNTczMzIsNTYxMjgsNTY0MjMsNTYxMjgsNTY0MTgsNTYxMjgsNTY0MjEsNTYxMjgsNTY0MzAsNTYxMjgsNTY0MjMsNTYxMjgsNTY0NDddLFs1NTM1Niw1NzMzMiw4MjAzLDU2MTI4LDU2NDIzLDgyMDMsNTYxMjgsNTY0MTgsODIwMyw1NjEyOCw1NjQyMSw4MjAzLDU2MTI4LDU2NDMwLDgyMDMsNTYxMjgsNTY0MjMsODIwMyw1NjEyOCw1NjQ0N10pO2Nhc2UiZW1vamkiOnJldHVybiFzKFsxMjk3NzcsMTI3OTk1LDgyMDUsMTI5Nzc4LDEyNzk5OV0sWzEyOTc3NywxMjc5OTUsODIwMywxMjk3NzgsMTI3OTk5XSl9cmV0dXJuITF9KG9bcl0pLHQuc3VwcG9ydHMuZXZlcnl0aGluZz10LnN1cHBvcnRzLmV2ZXJ5dGhpbmcmJnQuc3VwcG9ydHNbb1tyXV0sImZsYWciIT09b1tyXSYmKHQuc3VwcG9ydHMuZXZlcnl0aGluZ0V4Y2VwdEZsYWc9dC5zdXBwb3J0cy5ldmVyeXRoaW5nRXhjZXB0RmxhZyYmdC5zdXBwb3J0c1tvW3JdXSk7dC5zdXBwb3J0cy5ldmVyeXRoaW5nRXhjZXB0RmxhZz10LnN1cHBvcnRzLmV2ZXJ5dGhpbmdFeGNlcHRGbGFnJiYhdC5zdXBwb3J0cy5mbGFnLHQuRE9NUmVhZHk9ITEsdC5yZWFkeUNhbGxiYWNrPWZ1bmN0aW9uKCl7dC5ET01SZWFkeT0hMH0sdC5zdXBwb3J0cy5ldmVyeXRoaW5nfHwobj1mdW5jdGlvbigpe3QucmVhZHlDYWxsYmFjaygpfSxhLmFkZEV2ZW50TGlzdGVuZXI/KGEuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsbiwhMSksZS5hZGRFdmVudExpc3RlbmVyKCJsb2FkIixuLCExKSk6KGUuYXR0YWNoRXZlbnQoIm9ubG9hZCIsbiksYS5hdHRhY2hFdmVudCgib25yZWFkeXN0YXRlY2hhbmdlIixmdW5jdGlvbigpeyJjb21wbGV0ZSI9PT1hLnJlYWR5U3RhdGUmJnQucmVhZHlDYWxsYmFjaygpfSkpLChlPXQuc291cmNlfHx7fSkuY29uY2F0ZW1vamk/YyhlLmNvbmNhdGVtb2ppKTplLndwZW1vamkmJmUudHdlbW9qaSYmKGMoZS50d2Vtb2ppKSxjKGUud3BlbW9qaSkpKX0od2luZG93LGRvY3VtZW50LHdpbmRvdy5fd3BlbW9qaVNldHRpbmdzKTsK"></script> <style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
 <style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
-<link rel="stylesheet" id="wpo_min-header-0-css" href="./../wp-content/cache/wpo-minify/1653332029/assets/wpo-minify-header-a52dfa8d.min.css" type="text/css" media="all">
-<script type="text/javascript" id="wpo_min-header-0-js-extra">
-/* <![CDATA[ */
-var LS_Meta = {"v":"7.2.1","fixGSAP":"1"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./../wp-content/cache/wpo-minify/1653332029/assets/wpo-minify-header-ae1530ec.min.js" id="wpo_min-header-0-js"></script>
-<meta name="generator" content="Powered by LayerSlider 7.2.1 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress.">
-<!-- LayerSlider updates and docs at: https://layerslider.com -->
+<style id="bridge-stylesheet-inline-css" type="text/css">.page-id-371.disabled_footer_top .footer_top_holder, .page-id-371.disabled_footer_bottom .footer_bottom_holder { display: none;}</style>
+<style id="bridge-style-dynamic-responsive-inline-css" type="text/css">@media screen and (min-width: 1001px) {
+    .header_bottom {
+        padding-left: 62px;
+    }
+
+    header .header_inner_left {
+        left: 62px;
+    }
+}
+
+nav.main_menu ul li a > span {
+    position: relative;
+    padding: 0 11px;
+}
+
+nav.main_menu ul li a span.underline_dash:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #f57d05;
+}
+
+.light:not(.sticky):not(.scrolled) nav.main_menu ul li a span.underline_dash{
+    background-color: #f57d05 !important;
+    bottom: -6px;
+}
+
+.mobile_menu_button span:hover, .side_menu_button>a:hover, 
+header:not(.with_hover_bg_color) nav.main_menu>ul>li:hover>a {
+    opacity: 1;
+}
+
+.q_icon_with_title.custom_icon_image .icon_text_inner .icon_title {
+    margin-bottom: 13px;
+}
+
+.q_icon_with_title.tiny .icon_holder img {
+    width: auto;
+}
+
+.q_icon_with_title.tiny.custom_icon_image .icon_text_holder {
+    padding: 11px 0 0 75px;
+}
+
+
+body {
+  counter-reset: section;
+}
+
+ol li {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+ol li:before {
+    counter-increment: section;
+    content: counter(section, decimal-leading-zero);
+    color: #fff;
+    font-family: 'Source Code Pro', sans-serif;   
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 22px;
+    padding: 0 10px;
+    border-bottom: 1px solid #333333;                                                                                           
+}
+
+ol li:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 1px;
+    height: 10px;
+    background-color: #333333;
+}
+
+.latest_post_two_holder .latest_post_two_inner {
+    display: flex;
+    flex-direction: column-reverse
+}
+
+.latest_post_two_holder .latest_post_two_text {
+    padding: 28px 0 0;
+}
+
+.latest_post_two_holder .latest_post_two_text .separator {
+    display: none;
+} 
+
+.latest_post_two_holder .latest_post_two_info {
+    position: relative;
+    padding: 14px 0 3px 9px;
+    border-top: none;
+    border-bottom: 1px solid #333333;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.latest_post_two_holder .latest_post_two_info:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #333333;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.latest_post_two_holder li:hover .latest_post_two_info {
+    border-color: #f57d05;
+}
+
+.latest_post_two_holder li:hover .latest_post_two_info:before {
+    background-color: #f57d05;
+}
+
+.latest_post_two_holder .latest_post_two_info_inner .post_info_author {
+    display: none;
+}
+
+.latest_post_two_holder .latest_post_two_info_inner .post_info_date {
+    text-align: left;
+    color: #333333;
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.latest_post_two_holder li:hover .latest_post_two_info_inner .post_info_date {
+    color: #fff;
+}
+
+.latest_post_two_holder .latest_post_two_text .latest_post_two_title {
+    margin-bottom: 11px;
+}
+
+.latest_post_two_holder .latest_post_two_text .latest_post_two_title a {
+    font-size: 22px;
+    color: #fff;
+}
+
+.latest_post_two_holder .latest_post_two_text .latest_post_two_title a:hover {
+    color: #fff !important;
+}
+
+aside.sidebar .qode_latest_posts_widget .post_infos .date_hour_holder .date {
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f57d05
+}
+
+aside.sidebar .qode_latest_posts_widget .latest_post {
+    display: flex;
+}
+
+aside.sidebar .qode_latest_posts_widget .latest_post_image {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+aside.sidebar .latest_post_holder.image_in_box .latest_post_text {
+    padding-left: 20px;
+}
+
+.latest_post_holder.image_in_box .latest_post_text .latest_post_title {
+    margin: 0;
+}
+
+aside.sidebar .widget div:not(.star-rating) span:not(.qode_icon_element) {
+    line-height: 1em;
+}
+
+aside.sidebar .latest_post_holder>ul>li {
+    padding-top: 31px;
+}
+
+aside.sidebar .latest_post_holder>ul>li:first-child {
+    padding-top: 0;
+}
+
+aside.sidebar .qode_latest_posts_widget h5 {
+    margin-bottom: 33px;
+}
+
+.widget #searchform {
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+
+.widget #searchform:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #333;
+}
+
+.widget.widget_search form input[type=text],
+.widget.widget_search form input[type=text]::placeholder {
+    font-family: Source Code Pro;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.widget.widget_search form input[type=text] {
+    padding: 0 10px;
+    height: 28px;
+}
+
+.widget.widget_search form input[type=submit] {
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    color: #fff;
+}
+
+aside.sidebar .widget.widget_categories h5 {
+    margin-bottom: 18px;
+}
+
+aside.sidebar .widget.widget_categories ul li {
+    padding: 6px 0 7px;
+}
+
+aside.sidebar .widget.widget_categories ul li a {
+    font-family: Source Code Pro;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #737373;
+}
+
+aside.sidebar .widget.widget_media_image h5 {
+    margin-bottom: 33px;
+}
+
+.blog_holder article .post_text .post_text_inner {
+    padding-top: 45px;
+}
+
+.blog_holder.blog_large_image article .post_text h2 .date, 
+.blog_holder.blog_single article .post_text h2 .date {
+    display: block;
+    position: relative;
+    padding: 0 0 3px 10px;
+    font-family: Source Code Pro;
+    font-size: 13px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #737373;
+    border-bottom: 1px solid #333;
+    margin-bottom: 21px;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.blog_holder.blog_large_image article .post_text h2 .date:before, 
+.blog_holder.blog_single article .post_text h2 .date:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #333;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.blog_holder article .post_info {
+    display: none;
+}
+
+
+.blog_holder article .qbutton.small {
+    font-size: 13px;
+    line-height: 48px;
+    height: 48px;
+    padding: 0 42px;
+}
+
+.blog_holder article .post_excerpt {
+    margin-top: 23px;
+}
+
+.blog_holder article .post_more {
+    margin: 23px 0 0;
+}
+
+.blog_holder article .post_content_holder:hover .post_text h2 .date,
+.blog_holder.blog_single .post_content_holder:hover .post_text h2 .date {
+    border-color: #f57d05;
+}
+
+.blog_holder article .post_content_holder:hover .post_text h2 .date:before,
+.blog_holder.blog_single .post_content_holder:hover .post_text h2 .date:before {
+    background-color: #f57d05;
+}
+
+.blog_holder article .post_content_holder:hover .post_text h2 .date, 
+.blog_holder.blog_single .post_content_holder:hover .post_text h2 .date {
+    color: #fff;
+}
+
+.blog_holder.blog_large_image {
+    margin-bottom: 24px;
+}
+
+aside.sidebar .widget.widget_text h5 {
+    margin-bottom: 24px;
+}
+
+aside.sidebar .widget.widget_tag_cloud h5{
+    margin-bottom: 22px;
+}
+
+.qbutton {
+    border-left: none;
+    border-right: none;
+    position: relative;
+    line-height: 48px;
+    height: 48px;
+}
+
+.qbutton:before,
+.qbutton:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 13px;
+    background-color: #f57d05;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.qbutton:before {
+    bottom: 0;
+    left: 0;
+}
+
+.qbutton:after {
+    top: 0;
+    right: 0;
+}
+
+.qbutton:hover:before,
+.qbutton:hover:after {
+    height: 100%;
+}
+
+.qode-accordion-holder .qode-title-holder {
+    position: relative;
+    padding-left: 68px;
+    border-bottom: none;
+    border-top: 1px solid #333;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.qode-accordion-holder {
+  counter-reset: item;
+  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+.qode-accordion-holder:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #333;
+}
+
+
+.qode-accordion-holder .qode-title-holder:before {
+    counter-increment: item;
+    content: counter(item, decimal-leading-zero);
+    color: #333;
+    font-family: 'Source Code Pro', sans-serif;   
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 22px;
+    padding: 0 10px;
+    position: absolute;         
+    top: -30px;
+    left: 0;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);                                                                          
+}
+
+.qode-accordion-holder .qode-title-holder:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 10px;
+    width: 1px;
+    background-color: #333;
+    transform: translateY(-100%);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.qode-accordion-holder .qode-title-holder .qode-tab-title .qode-tab-title-icon {
+    display: none;
+}
+
+.qode-accordion-holder .qode-accordion-content {
+    padding: 0 10% 33px 68px;
+}
+
+.qode-accordion-holder .qode-title-holder .qode-tab-title {
+    height: 93px;
+}
+
+.qode-accordion-holder .qode-title-holder .qode-tab-title span.qode-tab-title-inner {
+    padding: 3px 0 7px;
+}
+
+.qode-accordion-holder .qode-title-holder.ui-state-active, 
+.qode-accordion-holder .qode-title-holder.ui-state-hover {
+    border-color: #f57d05;
+}
+
+.qode-accordion-holder .qode-title-holder.ui-state-active:after, 
+.qode-accordion-holder .qode-title-holder.ui-state-hover:after {
+    background-color: #f57d05;
+}
+
+.qode-accordion-holder .qode-title-holder.ui-state-active:before, 
+.qode-accordion-holder .qode-title-holder.ui-state-hover:before {
+    color: #fff;
+}
+
+.qode-accordion-holder .qode-title-holder .qode-accordion-mark {
+    right: 35px;
+}
+
+.qode-contact-form-7 label {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #737373;
+}
+
+.qode-contact-form-7 .qbutton.default {
+    padding-left: 66px;
+    padding-right: 66px;
+    margin-top: 8px;
+}
+
+.q_price_table {
+    border-top: transparent;
+}
+
+.qode_pricing_tables {
+  counter-reset: item;
+}
+
+.q_price_table.qode_pricing_table_standard:before {
+    counter-increment: section;
+    content: counter(section, decimal-leading-zero);
+    color: #333333;
+    font-family: 'Source Code Pro', sans-serif;   
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    padding: 0 10px;
+    display: block;
+    border-bottom: 1px solid #333333;                                                                                           
+}
+
+.q_price_table.qode_pricing_table_standard:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;;
+    width: 1px;
+    height: 10px;
+    background-color: #333333;
+}
+
+.q_price_table .price_table_inner {
+    background-color: transparent;
+}
+
+.price_table_inner ul li {
+    text-align: left;
+}
+
+.price_table_inner ul li.table_title {
+    padding: 39px 0 13px;
+}
+
+.price_in_table {
+    text-align: left;
+}
+
+.price_table_inner ul li {
+    padding: 0 0 13px;
+}
+
+
+.price_in_table .price {
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 55px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+.price_in_table .value {
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 30px;
+    top: 5px;
+}
+
+.price_in_table .mark {
+    display: none;
+}
+
+.price_table_inner ul li.pricing_table_content {
+    padding: 30px 0 10px;
+}
+
+.price_table_inner ul li.pricing_table_content li {
+    font-family: 'Roboto', sans-serif;
+    color: #737373;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.price_button .qbutton {
+    margin: 19px 0 0;
+}
+
+.price_table_inner ul li.pricing_table_content li:before {
+    content: "\4e";
+    font-family: 'ElegantIcons';
+    padding-right: 13px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1001px)  {
+    nav.main_menu ul li a > span.plus {
+        display: none;
+    }
+
+    nav.main_menu>ul>li>a {
+        padding: 0 15px;
+    }
+
+    nav.main_menu ul li {
+        float: none;
+    }
+
+    nav.main_menu {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 60%;
+    }
+
+    nav.main_menu>ul {
+        left: auto;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    nav.main_menu>ul>li>a {
+        padding: 0 5px;
+    }
+}
+
+.side_menu_button .qode-side-menu-button-svg svg path, 
+.side_menu_button .qode-side-menu-button-svg svg>* {
+    fill: initial;
+    stroke: initial;
+}
+
+.side_menu_button .qode-side-menu-button-svg svg {
+    overflow: hidden;
+}
+
+.side_menu_button .qode-side-menu-button-svg svg g:nth-of-type(3) rect,
+.side_menu_button .qode-side-menu-button-svg svg g:nth-of-type(4) rect {
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.side_menu_button .side_menu_button_link.qode-side-menu-button-svg:hover g:nth-of-type(3) rect,
+.side_menu_button .side_menu_button_link.qode-side-menu-button-svg:hover g:nth-of-type(4) rect {
+    height: 200%;
+}
+
+.side_menu_button .side_menu_button_link.qode-side-menu-button-svg:hover g:nth-of-type(4) rect {
+    transform: translateY(-100%);
+}
+
+.footer_inner .q_icon_with_title .icon_with_title_link {
+    margin: 5px 0 0;
+}
+
+.footer_inner .column2 .widget_text h5 {
+    margin-bottom: 2px;
+}
+
+.footer_inner .column4 .widget_text h5 {
+    margin-bottom: 7px;
+}
+
+.footer_inner .column4 .widget.widget_media_image {
+    display: inline-block;
+}
+
+.footer_inner .column4 .widget.widget_media_image:not(:last-of-type) {
+    margin-right: 15px !important;
+}
+
+aside.sidebar .widget.qode_icon_with_text_widget .icon_text_inner .icon_with_title_link {
+    margin-top: 5px;
+    line-height: 26px;
+    color: #737373;
+}
+
+aside.sidebar .widget.qode_icon_with_text_widget .q_icon_with_title .icon_text_inner {
+    padding: 0;
+}
+
+aside.sidebar .widget.qode_icon_with_text_widget {
+    margin-bottom: 11px;
+}
+
+.qode-contact-form-7 .qode-cf-newsletter-submit {
+    text-align: center;
+}
+
+.qode-contact-form-7 .qode-cf-newsletter-submit .qbutton.default {
+    padding-left: 43px;
+    padding-right: 43px;
+    border-color: #f57d05;
+}
+
+.qode-contact-form-7 .qode-cf-newsletter-submit .qbutton.default:before,
+.qode-contact-form-7 .qode-cf-newsletter-submit .qbutton.default:after {
+    background-color: #f57d05;
+}
+
+.qode-contact-form-7 .qode-cf-newsletter-submit .ajax-loader {
+    position: absolute;
+}
+
+.side_menu a.close_side_menu {
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+}
+
+.side_menu_slide_from_right .side_menu {
+    text-align: left;
+}
+
+.side_menu_slide_from_right .side_menu .widget.widget_media_image {
+    display: inline-block;
+}
+
+.side_menu_slide_from_right .side_menu .widget.widget_media_image:not(:last-of-type) {
+    margin-right: 15px !important;
+}
+
+.right_side_menu_opened .wrapper, 
+.right_side_menu_opened footer.uncover {
+    left: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .side_menu_button_wrapper {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .qode-accordion-holder .qode-title-holder .qode-accordion-mark {
+        right: 0;
+    }
+
+    .qode-accordion-holder .qode-title-holder,
+    .qode-accordion-holder .qode-accordion-content {
+        padding-left: 60px;
+    }
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form .three_columns {
+    order: -1;
+}
+
+#respond input[type=text], 
+#respond input[type=email], 
+#respond textarea {
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    padding: 2px 0;
+    margin: 0 0 40px;
+    color: #737373;
+    font-family: Source Code Pro;
+    font-size: 18px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+
+#respond textarea {
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+#respond input[type=text]:focus, 
+#respond input[type=email]:focus, 
+#respond textarea:focus {
+    color: #fff;
+    border-color: #f57d05;
+}
+
+.comment-form .three_columns>.column1, 
+.comment-form .three_columns>.column2, 
+.comment-form .three_columns>.column3 {
+    width: 100%;
+}
+
+.comment-form .three_columns>.column1>.column_inner, 
+.comment-form .three_columns>.column2>.column_inner, 
+.comment-form .three_columns>.column3>.column_inner {
+    padding: 0;
+}
+
+div.comment_form form p.form-submit, 
+div.comment_holder .comment p.form-submit {
+    margin: 22px 0 0;
+    text-align: left;
+}
+
+div.comment_form {
+    margin: 0 0 120px;
+}
+
+.price_button .qbutton:hover {
+    background-color: transparent;
+}
+
+.side_menu .widget.widget_text {
+    padding-right: 30%;
+}
+
+.footer_inner .q_icon_with_title:not(.right) .icon_holder {
+    width: 18px;
+    text-align: center;
+}
+
+.title .text_above_title {
+    margin-bottom: 0;
+}
+
+.title.title_size_small h1 {
+    line-height: 1.15em;
+}
+
+aside.sidebar .widget.widget_categories {
+    margin: 0 0 55px;
+}
+
+aside.sidebar .qode_latest_posts_widget {
+    margin: 0 0 70px;
+}
+
+aside.sidebar .widget.widget_tag_cloud {
+    margin: 0 0 53px;
+}
+
+aside.sidebar .widget.widget_media_image {
+    margin: 0 0 62px;
+}
+
+aside.sidebar .widget.widget_text {
+    margin: 0 0 64px;
+}
+
+.blog_holder article .post_more {
+    margin: 52px 0 0;
+}</style>
+<link rel="stylesheet" id="bridge-style-handle-google-fonts-css" href="http://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic%7CSource+Code+Pro%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic%7CRoboto%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-6-css" href="./../wp-content/cache/autoptimize/css/autoptimize_single_020fa70de9982be76ba4e26a5cd01835.css?ver=1652656810" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="./../wp-content/cache/autoptimize/css/autoptimize_single_a07c23e4f73d3f04890298ab831e650f.css?ver=1652656811" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-371-css" href="./../wp-content/cache/autoptimize/css/autoptimize_single_483ba138bb1da62f520bfd88bd17a10a.css?ver=1652667054" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.0" type="text/css" media="all"> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/ScrollToPlugin.min.js?ver=6.0" id="ScrollToPlugin-js"></script> <script type="text/javascript" src="./../wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script> <script defer type="text/javascript" src="./../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script> <script defer id="layerslider-utils-js-extra" src="data:text/javascript;base64,Ci8qIDwhW0NEQVRBWyAqLwp2YXIgTFNfTWV0YSA9IHsidiI6IjcuMi4xIiwiZml4R1NBUCI6IjEifTsKLyogXV0+ICovCg=="></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_7290f615d9c37eefaff298dea30c0472.js?ver=7.2.1" id="layerslider-utils-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_c3d9a994a0204932a7b06dbdc2167e4a.js?ver=7.2.1" id="layerslider-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_361eef4b342ac96e06df4dc2db49ea68.js?ver=7.2.1" id="layerslider-transitions-js"></script> <meta name="generator" content="Powered by LayerSlider 7.2.1 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress.">
 <link rel="https://api.w.org/" href="./../wp-json/index.html">
 <link rel="alternate" type="application/json" href="./../wp-json/wp/v2/pages/371/index.html">
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="./../xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./../wp-includes/wlwmanifest.xml"> 
-<meta name="generator" content="WordPress 5.9.3">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./../wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.0">
 <link rel="canonical" href="./index.html">
 <link rel="shortlink" href="./../index.html?p=371">
 <link rel="alternate" type="application/json+oembed" href="./../wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2Fusage%2F">
-<link rel="alternate" type="text/xml+oembed" href="./../wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2Fusage%2F&#038;format=xml">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VPFQF28HW3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VPFQF28HW3');
-</script>
-<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
-<meta name="generator" content="Powered by Slider Revolution 6.5.21 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
-<script>function setREVStartSize(e){
-			//window.requestAnimationFrame(function() {
-				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
-				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
-				try {
-					var pw = document.getElementById(e.c).parentNode.offsetWidth,
-						newh;
-					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
-					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
-					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
-					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
-					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
-					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
-					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
-					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
-					if(e.layout==="fullscreen" || e.l==="fullscreen")
-						newh = Math.max(e.mh,window.RSIH);
-					else{
-						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
-						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
-						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
-											
-						var nl = new Array(e.rl.length),
-							ix = 0,
-							sl;
-						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
-						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
-						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
-						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
-						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
-						sl = nl[0];
-						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
-						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
-						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
-					}
-					var el = document.getElementById(e.c);
-					if (el!==null && el) el.style.height = newh+"px";
-					el = document.getElementById(e.c+"_wrapper");
-					if (el!==null && el) {
-						el.style.height = newh+"px";
-						el.style.display = "block";
-					}
-				} catch(e){
-					console.log("Failure at Presize of Slider:" + e)
-				}
-			//});
-		  };</script>
-<noscript><style>.wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+<link rel="alternate" type="text/xml+oembed" href="./../wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2Fusage%2F&#038;format=xml">  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPFQF28HW3"></script> <script defer src="data:text/javascript;base64,DQogIHdpbmRvdy5kYXRhTGF5ZXIgPSB3aW5kb3cuZGF0YUxheWVyIHx8IFtdOw0KICBmdW5jdGlvbiBndGFnKCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKTt9DQogIGd0YWcoJ2pzJywgbmV3IERhdGUoKSk7DQoNCiAgZ3RhZygnY29uZmlnJywgJ0ctVlBGUUYyOEhXMycpOw0K"></script> <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<meta name="generator" content="Powered by Slider Revolution 6.5.21 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."> <noscript><style>.wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
 </head>
-
-<body class="page-template page-template-full_width page-template-full_width-php page page-id-371 bridge-core-3.0.2 qodef-qi--no-touch qi-addons-for-elementor-1.5.3  qode_grid_1300 footer_responsive_adv qode-content-sidebar-responsive qode-overridden-elementors-fonts qode_disabled_responsive_button_padding_change qode-theme-ver-28.8 qode-theme-bridge disabled_footer_top disabled_footer_bottom wpb-js-composer js-comp-ver-6.9.0 vc_responsive elementor-default elementor-kit-6 elementor-page elementor-page-371" itemscope itemtype="http://schema.org/WebPage">
-
-
-<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
-
-<div class="wrapper">
-	<div class="wrapper_inner">
-
-    
-		<!-- Google Analytics start -->
-				<!-- Google Analytics end -->
-
-		
-	<header class=" scroll_header_top_area light regular transparent header_style_on_scroll page_header">
-    <div class="header_inner clearfix">
-                <div class="header_top_bottom_holder">
-            
-            <div class="header_bottom clearfix" style=" background-color:rgba(22, 22, 22, 0);">
-                
-                            <div class="header_inner_left">
-                                									<div class="mobile_menu_button">
-		<span>
-			<span aria-hidden="true" class="qode-icon-kiko kikor kiko-navigation "></span>		</span>
-	</div>
-                                <div class="logo_wrapper">
-	<div class="q_logo">
-		<a itemprop="url" href="./../index.html">
-             <img itemprop="image" class="normal" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 			 <img itemprop="image" class="light" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 			 <img itemprop="image" class="dark" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 			 <img itemprop="image" class="sticky" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 			 <img itemprop="image" class="mobile" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> 					</a>
-	</div>
-	</div>                                                            </div>
-                                                                    <div class="header_inner_right">
-                                        <div class="side_menu_button_wrapper right">
-                                                                                                                                    <div class="side_menu_button">
-                                                                                                                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                
-                                <nav class="main_menu drop_down center">
-                                    <ul id="menu-main-menu" class="">
+<body class="page-template page-template-full_width page-template-full_width-php page page-id-371 bridge-core-3.0.2 qodef-qi--no-touch qi-addons-for-elementor-1.5.3  qode_grid_1300 footer_responsive_adv qode-content-sidebar-responsive qode-overridden-elementors-fonts qode_disabled_responsive_button_padding_change qode-theme-ver-28.8 qode-theme-bridge disabled_footer_top disabled_footer_bottom wpb-js-composer js-comp-ver-6.9.0 vc_responsive elementor-default elementor-kit-6 elementor-page elementor-page-371" itemscope itemtype="http://schema.org/WebPage"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><div class="wrapper"><div class="wrapper_inner">
+<header class=" scroll_header_top_area light regular transparent header_style_on_scroll page_header"><div class="header_inner clearfix"><div class="header_top_bottom_holder"><div class="header_bottom clearfix" style=" background-color:rgba(22, 22, 22, 0);">
+<div class="header_inner_left">
+<div class="mobile_menu_button"> <span> <span aria-hidden="true" class="qode-icon-kiko kikor kiko-navigation "></span> </span>
+</div>
+<div class="logo_wrapper"><div class="q_logo"> <a itemprop="url" href="./../index.html"> <img itemprop="image" class="normal" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> <img itemprop="image" class="light" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> <img itemprop="image" class="dark" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> <img itemprop="image" class="sticky" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> <img itemprop="image" class="mobile" src="./../wp-content/uploads/2022/05/nft_api_engine_logo.png" alt="Logo"> </a>
+</div></div>
+</div>
+<div class="header_inner_right"><div class="side_menu_button_wrapper right"><div class="side_menu_button"></div></div></div>
+<nav class="main_menu drop_down center"><ul id="menu-main-menu" class="">
 <li id="nav-menu-item-696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  narrow"><a href="./../index.html" class=""><i class="menu_icon blank fa"></i><span>Home<span class="underline_dash"></span></span><span class="plus"></span></a></li>
 <li id="nav-menu-item-699" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-371 current_page_item active narrow"><a href="./index.html" class=" current "><i class="menu_icon blank fa"></i><span>Usage<span class="underline_dash"></span></span><span class="plus"></span></a></li>
 <li id="nav-menu-item-698" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="./../our-services/index.html" class=""><i class="menu_icon blank fa"></i><span>Price | Services<span class="underline_dash"></span></span><span class="plus"></span></a></li>
 <li id="nav-menu-item-870" class="menu-item menu-item-type-custom menu-item-object-custom  narrow"><a href="https://calendly.com/balmacefa/nft" class=""><i class="menu_icon blank fa"></i><span>Questions? Book a call<span class="underline_dash"></span></span><span class="plus"></span></a></li>
-</ul>                                </nav>
-                                							    <nav class="mobile_menu">
-	<ul id="menu-main-menu-1" class="">
+</ul></nav><nav class="mobile_menu"><ul id="menu-main-menu-1" class="">
 <li id="mobile-menu-item-696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home ">
 <a href="./../index.html" class=""><span>Home</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
 </li>
@@ -160,254 +886,109 @@ var LS_Meta = {"v":"7.2.1","fixGSAP":"1"};
 <li id="mobile-menu-item-870" class="menu-item menu-item-type-custom menu-item-object-custom ">
 <a href="https://calendly.com/balmacefa/nft" class=""><span>Questions? Book a call</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
 </li>
-</ul></nav>                                                </div>
-            </div>
-        </div>
-</header>	<a id="back_to_top" href="#">
-        <span class="fa-stack">
-            <span aria-hidden="true" class="qode_icon_font_elegant arrow_up "></span>        </span>
-	</a>
-	
-	
-    
-    	
-    
-    <div class="content ">
-        <div class="content_inner  ">
-    			<div class="title_outer title_without_animation" data-height="470">
-		<div class="title title_size_small  position_center  has_background" style="background-size:1920px auto;background-image:url(./../wp-content/uploads/2021/05/title-background.jpg);height:470px;">
-			<div class="image not_responsive">
-<img itemprop="image" src="./../wp-content/uploads/2021/05/title-background.jpg" alt="&nbsp;"> </div>
-										<div class="title_holder" style="padding-top:55px;height:415px;">
-					<div class="container">
-						<div class="container_inner clearfix">
-								<div class="title_subtitle_holder">
-                                                                									<div class="title_subtitle_holder_inner">
-																											<span class="text_above_title">Explore the Features</span>
-																		<h1><span>Usage</span></h1>
-																	
-																																			</div>
-								                                                            </div>
-						</div>
-					</div>
-				</div>
-								</div>
-			</div>
-			<div class="full_width">
-	<div class="full_width_inner">
-												<div data-elementor-type="wp-page" data-elementor-id="371" class="elementor elementor-371">
-									<section class="elementor-section elementor-top-section elementor-element elementor-element-61646bc elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="61646bc" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4a662c6 elementor-invisible" data-id="4a662c6" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-7d5c0ca elementor-widget elementor-widget-image" data-id="7d5c0ca" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-			<style>/*! elementor - v3.6.5 - 27-04-2022 */
-.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>												<img width="631" height="499" src="./../wp-content/uploads/2021/05/services-image-3.png" class="attachment-full size-full" alt="s" loading="lazy" srcset="./../wp-content/uploads/2021/05/services-image-3.png 631w, ./../wp-content/uploads/2021/05/services-image-3-300x237.png 300w" sizes="(max-width: 631px) 100vw, 631px">															</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a5f6732 elementor-invisible" data-id="a5f6732" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;,&quot;animation_delay&quot;:100}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-c2e0b63 elementor-widget elementor-widget-heading" data-id="c2e0b63" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<style>/*! elementor - v3.6.5 - 27-04-2022 */
+</ul></nav>
+</div></div></div></header> <a id="back_to_top" href="#"> <span class="fa-stack"> <span aria-hidden="true" class="qode_icon_font_elegant arrow_up "></span> </span> </a><div class="content "><div class="content_inner  ">
+<div class="title_outer title_without_animation" data-height="470"><div class="title title_size_small  position_center  has_background" style="background-size:1920px auto;background-image:url(./../wp-content/uploads/2021/05/title-background.jpg);height:470px;">
+<div class="image not_responsive"><img itemprop="image" src="./../wp-content/uploads/2021/05/title-background.jpg" alt="&nbsp;"></div>
+<div class="title_holder" style="padding-top:55px;height:415px;"><div class="container"><div class="container_inner clearfix"><div class="title_subtitle_holder"><div class="title_subtitle_holder_inner"> <span class="text_above_title">Explore the Features</span><h1><span>Usage</span></h1>
+</div></div></div></div></div>
+</div></div>
+<div class="full_width"><div class="full_width_inner"><div data-elementor-type="wp-page" data-elementor-id="371" class="elementor elementor-371">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-61646bc elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="61646bc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4a662c6 elementor-invisible" data-id="4a662c6" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-7d5c0ca elementor-widget elementor-widget-image" data-id="7d5c0ca" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container">
+<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>
+<img width="631" height="499" src="./../wp-content/uploads/2021/05/services-image-3.png" class="attachment-full size-full" alt="s" loading="lazy" srcset="./../wp-content/uploads/2021/05/services-image-3.png 631w, ./../wp-content/uploads/2021/05/services-image-3-300x237.png 300w" sizes="(max-width: 631px) 100vw, 631px">
+</div></div></div></div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a5f6732 elementor-invisible" data-id="a5f6732" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;,&quot;animation_delay&quot;:100}"><div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-c2e0b63 elementor-widget elementor-widget-heading" data-id="c2e0b63" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container">
+<style>/*! elementor - v3.6.5 - 27-04-2022 */
 .elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style>
-<h6 class="elementor-heading-title elementor-size-default">NFT API ENGINE</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-da95e77 elementor-widget elementor-widget-spacer" data-id="da95e77" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-			<style>/*! elementor - v3.6.5 - 27-04-2022 */
-.e-container.e-container--row .elementor-spacer-inner{width:var(--spacer-size)}.e-container.e-container--column .elementor-spacer-inner,.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}</style>		<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-b519855 elementor-widget elementor-widget-heading" data-id="b519855" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h3 class="elementor-heading-title elementor-size-default">Enterprise NFT Engine</h3>		</div>
-				</div>
-				<div class="elementor-element elementor-element-6d5e5e0 elementor-widget elementor-widget-spacer" data-id="6d5e5e0" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-9efe768 elementor-widget elementor-widget-text-editor" data-id="9efe768" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-			<style>/*! elementor - v3.6.5 - 27-04-2022 */
-.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<p>It is easy to use and only requires one API call! This makes it perfect for developers who want to create NFTs but don&#8217;t have the time or expertise to do so.</p>
+<h6 class="elementor-heading-title elementor-size-default">NFT API ENGINE</h6>
+</div></div>
+<div class="elementor-element elementor-element-da95e77 elementor-widget elementor-widget-spacer" data-id="da95e77" data-element_type="widget" data-widget_type="spacer.default"><div class="elementor-widget-container">
+<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.e-container.e-container--row .elementor-spacer-inner{width:var(--spacer-size)}.e-container.e-container--column .elementor-spacer-inner,.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}</style>
+<div class="elementor-spacer"><div class="elementor-spacer-inner"></div></div>
+</div></div>
+<div class="elementor-element elementor-element-b519855 elementor-widget elementor-widget-heading" data-id="b519855" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Enterprise NFT Engine</h3></div></div>
+<div class="elementor-element elementor-element-6d5e5e0 elementor-widget elementor-widget-spacer" data-id="6d5e5e0" data-element_type="widget" data-widget_type="spacer.default"><div class="elementor-widget-container"><div class="elementor-spacer"><div class="elementor-spacer-inner"></div></div></div></div>
+<div class="elementor-element elementor-element-9efe768 elementor-widget elementor-widget-text-editor" data-id="9efe768" data-element_type="widget" data-widget_type="text-editor.default"><div class="elementor-widget-container">
+<style>/*! elementor - v3.6.5 - 27-04-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>
+<p>It is easy to use and only requires one API call! This makes it perfect for developers who want to create NFTs but don&#8217;t have the time or expertise to do so.</p>
 <p> </p>
 <p>We maintain our private keys, signed contracts, and minting, and NFTs are sent to the destination address via Airdrop.</p>
 <p> </p>
 <p>If you want to use your own private keys, please contact us and we will take care of the rest.</p>
-<div id="skip-silence-bar"> </div>						</div>
-				</div>
-					</div>
-		</div>
-							</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-afe1d0a elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="afe1d0a" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-370c526 animated-slow elementor-invisible" data-id="370c526" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInDown&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-709793e0 elementor-widget elementor-widget-image" data-id="709793e0" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img width="593" height="538" src="./../wp-content/uploads/2021/05/services-image-1a.jpg" class="attachment-full size-full" alt="c" loading="lazy" srcset="./../wp-content/uploads/2021/05/services-image-1a.jpg 593w, ./../wp-content/uploads/2021/05/services-image-1a-300x272.jpg 300w" sizes="(max-width: 593px) 100vw, 593px">															</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-c5be6ab elementor-invisible" data-id="c5be6ab" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-fbbb106 elementor-widget elementor-widget-heading" data-id="fbbb106" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Location-based NFTs</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-114c9da9 elementor-widget elementor-widget-spacer" data-id="114c9da9" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-649c4f3e elementor-widget elementor-widget-heading" data-id="649c4f3e" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h3 class="elementor-heading-title elementor-size-default">Enhance Your Museum Experience Using Blockchain Technology</h3>		</div>
-				</div>
-				<div class="elementor-element elementor-element-77fc8576 elementor-widget elementor-widget-spacer" data-id="77fc8576" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-1550b988 elementor-widget elementor-widget-text-editor" data-id="1550b988" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p><span data-offset-key="df910-108-0" data-darkreader-inline-bgcolor="">M</span><span data-offset-key="df910-109-0" data-darkreader-inline-bgcolor="">use</span><span data-offset-key="df910-110-0" data-darkreader-inline-bgcolor="">ums</span><span data-offset-key="df910-111-0" data-darkreader-inline-bgcolor=""> are</span><span data-offset-key="df910-112-0" data-darkreader-inline-bgcolor=""> constantly</span><span data-offset-key="df910-113-0" data-darkreader-inline-bgcolor=""> looking</span><span data-offset-key="df910-114-0" data-darkreader-inline-bgcolor=""> for</span><span data-offset-key="df910-115-0" data-darkreader-inline-bgcolor=""> ways</span><span data-offset-key="df910-116-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-117-0" data-darkreader-inline-bgcolor=""> enhance</span><span data-offset-key="df910-118-0" data-darkreader-inline-bgcolor=""> the</span><span data-offset-key="df910-119-0" data-darkreader-inline-bgcolor=""> visitor</span><span data-offset-key="df910-120-0" data-darkreader-inline-bgcolor=""> experience</span><span data-offset-key="df910-121-0" data-darkreader-inline-bgcolor="">.</span><span data-offset-key="df910-122-0" data-darkreader-inline-bgcolor=""> Blockchain</span><span data-offset-key="df910-123-0" data-darkreader-inline-bgcolor=""> technology</span><span data-offset-key="df910-124-0" data-darkreader-inline-bgcolor=""> can</span><span data-offset-key="df910-125-0" data-darkreader-inline-bgcolor=""> help</span><span data-offset-key="df910-126-0" data-darkreader-inline-bgcolor=""> by</span><span data-offset-key="df910-127-0" data-darkreader-inline-bgcolor=""> providing</span><span data-offset-key="df910-128-0" data-darkreader-inline-bgcolor=""> a</span><span data-offset-key="df910-129-0" data-darkreader-inline-bgcolor=""> way</span><span data-offset-key="df910-130-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-131-0" data-darkreader-inline-bgcolor=""> create</span><span data-offset-key="df910-132-0" data-darkreader-inline-bgcolor=""> and</span><span data-offset-key="df910-133-0" data-darkreader-inline-bgcolor=""> manage</span><span data-offset-key="df910-134-0" data-darkreader-inline-bgcolor=""> unique</span><span data-offset-key="df910-135-0" data-darkreader-inline-bgcolor=""> digital</span><span data-offset-key="df910-136-0" data-darkreader-inline-bgcolor=""> assets</span><span data-offset-key="df910-137-0" data-darkreader-inline-bgcolor="">,</span><span data-offset-key="df910-138-0" data-darkreader-inline-bgcolor=""> such</span><span data-offset-key="df910-139-0" data-darkreader-inline-bgcolor=""> as</span><span data-offset-key="df910-140-0" data-darkreader-inline-bgcolor=""> non</span><span data-offset-key="df910-141-0" data-darkreader-inline-bgcolor="">&#8211;</span><span data-offset-key="df910-142-0" data-darkreader-inline-bgcolor="">f</span><span data-offset-key="df910-143-0" data-darkreader-inline-bgcolor="">ung</span><span data-offset-key="df910-144-0" data-darkreader-inline-bgcolor="">ible</span><span data-offset-key="df910-145-0" data-darkreader-inline-bgcolor=""> tokens</span><span data-offset-key="df910-146-0" data-darkreader-inline-bgcolor=""> (</span><span data-offset-key="df910-147-0" data-darkreader-inline-bgcolor="">N</span><span data-offset-key="df910-148-0" data-darkreader-inline-bgcolor="">FT</span><span data-offset-key="df910-149-0" data-darkreader-inline-bgcolor="">s</span><span data-offset-key="df910-150-0" data-darkreader-inline-bgcolor="">).</span></p>
+<div id="skip-silence-bar"> </div>
+</div></div>
+</div></div>
+</div></section><section class="elementor-section elementor-top-section elementor-element elementor-element-afe1d0a elementor-section-full_width qode_elementor_container_inner elementor-section-height-default elementor-section-height-default parallax_section_no" data-id="afe1d0a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-370c526 animated-slow elementor-invisible" data-id="370c526" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInDown&quot;}"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-709793e0 elementor-widget elementor-widget-image" data-id="709793e0" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"> <img width="593" height="538" src="./../wp-content/uploads/2021/05/services-image-1a.jpg" class="attachment-full size-full" alt="c" loading="lazy" srcset="./../wp-content/uploads/2021/05/services-image-1a.jpg 593w, ./../wp-content/uploads/2021/05/services-image-1a-300x272.jpg 300w" sizes="(max-width: 593px) 100vw, 593px">
+</div></div></div></div>
+<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-c5be6ab elementor-invisible" data-id="c5be6ab" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}"><div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-fbbb106 elementor-widget elementor-widget-heading" data-id="fbbb106" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h6 class="elementor-heading-title elementor-size-default">Location-based NFTs</h6></div></div>
+<div class="elementor-element elementor-element-114c9da9 elementor-widget elementor-widget-spacer" data-id="114c9da9" data-element_type="widget" data-widget_type="spacer.default"><div class="elementor-widget-container"><div class="elementor-spacer"><div class="elementor-spacer-inner"></div></div></div></div>
+<div class="elementor-element elementor-element-649c4f3e elementor-widget elementor-widget-heading" data-id="649c4f3e" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Enhance Your Museum Experience Using Blockchain Technology</h3></div></div>
+<div class="elementor-element elementor-element-77fc8576 elementor-widget elementor-widget-spacer" data-id="77fc8576" data-element_type="widget" data-widget_type="spacer.default"><div class="elementor-widget-container"><div class="elementor-spacer"><div class="elementor-spacer-inner"></div></div></div></div>
+<div class="elementor-element elementor-element-1550b988 elementor-widget elementor-widget-text-editor" data-id="1550b988" data-element_type="widget" data-widget_type="text-editor.default"><div class="elementor-widget-container">
+<p><span data-offset-key="df910-108-0" data-darkreader-inline-bgcolor="">M</span><span data-offset-key="df910-109-0" data-darkreader-inline-bgcolor="">use</span><span data-offset-key="df910-110-0" data-darkreader-inline-bgcolor="">ums</span><span data-offset-key="df910-111-0" data-darkreader-inline-bgcolor=""> are</span><span data-offset-key="df910-112-0" data-darkreader-inline-bgcolor=""> constantly</span><span data-offset-key="df910-113-0" data-darkreader-inline-bgcolor=""> looking</span><span data-offset-key="df910-114-0" data-darkreader-inline-bgcolor=""> for</span><span data-offset-key="df910-115-0" data-darkreader-inline-bgcolor=""> ways</span><span data-offset-key="df910-116-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-117-0" data-darkreader-inline-bgcolor=""> enhance</span><span data-offset-key="df910-118-0" data-darkreader-inline-bgcolor=""> the</span><span data-offset-key="df910-119-0" data-darkreader-inline-bgcolor=""> visitor</span><span data-offset-key="df910-120-0" data-darkreader-inline-bgcolor=""> experience</span><span data-offset-key="df910-121-0" data-darkreader-inline-bgcolor="">.</span><span data-offset-key="df910-122-0" data-darkreader-inline-bgcolor=""> Blockchain</span><span data-offset-key="df910-123-0" data-darkreader-inline-bgcolor=""> technology</span><span data-offset-key="df910-124-0" data-darkreader-inline-bgcolor=""> can</span><span data-offset-key="df910-125-0" data-darkreader-inline-bgcolor=""> help</span><span data-offset-key="df910-126-0" data-darkreader-inline-bgcolor=""> by</span><span data-offset-key="df910-127-0" data-darkreader-inline-bgcolor=""> providing</span><span data-offset-key="df910-128-0" data-darkreader-inline-bgcolor=""> a</span><span data-offset-key="df910-129-0" data-darkreader-inline-bgcolor=""> way</span><span data-offset-key="df910-130-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-131-0" data-darkreader-inline-bgcolor=""> create</span><span data-offset-key="df910-132-0" data-darkreader-inline-bgcolor=""> and</span><span data-offset-key="df910-133-0" data-darkreader-inline-bgcolor=""> manage</span><span data-offset-key="df910-134-0" data-darkreader-inline-bgcolor=""> unique</span><span data-offset-key="df910-135-0" data-darkreader-inline-bgcolor=""> digital</span><span data-offset-key="df910-136-0" data-darkreader-inline-bgcolor=""> assets</span><span data-offset-key="df910-137-0" data-darkreader-inline-bgcolor="">,</span><span data-offset-key="df910-138-0" data-darkreader-inline-bgcolor=""> such</span><span data-offset-key="df910-139-0" data-darkreader-inline-bgcolor=""> as</span><span data-offset-key="df910-140-0" data-darkreader-inline-bgcolor=""> non</span><span data-offset-key="df910-141-0" data-darkreader-inline-bgcolor="">&#8211;</span><span data-offset-key="df910-142-0" data-darkreader-inline-bgcolor="">f</span><span data-offset-key="df910-143-0" data-darkreader-inline-bgcolor="">ung</span><span data-offset-key="df910-144-0" data-darkreader-inline-bgcolor="">ible</span><span data-offset-key="df910-145-0" data-darkreader-inline-bgcolor=""> tokens</span><span data-offset-key="df910-146-0" data-darkreader-inline-bgcolor=""> (</span><span data-offset-key="df910-147-0" data-darkreader-inline-bgcolor="">N</span><span data-offset-key="df910-148-0" data-darkreader-inline-bgcolor="">FT</span><span data-offset-key="df910-149-0" data-darkreader-inline-bgcolor="">s</span><span data-offset-key="df910-150-0" data-darkreader-inline-bgcolor="">).</span></p>
 <p> </p>
 <p><span data-offset-key="df910-153-0" data-darkreader-inline-bgcolor="">N</span><span data-offset-key="df910-154-0" data-darkreader-inline-bgcolor="">FT</span><span data-offset-key="df910-155-0" data-darkreader-inline-bgcolor="">s</span><span data-offset-key="df910-156-0" data-darkreader-inline-bgcolor=""> can</span><span data-offset-key="df910-157-0" data-darkreader-inline-bgcolor=""> be</span><span data-offset-key="df910-158-0" data-darkreader-inline-bgcolor=""> used</span><span data-offset-key="df910-159-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-160-0" data-darkreader-inline-bgcolor=""> provide</span><span data-offset-key="df910-161-0" data-darkreader-inline-bgcolor=""> exclusive</span><span data-offset-key="df910-162-0" data-darkreader-inline-bgcolor=""> benefits</span><span data-offset-key="df910-163-0" data-darkreader-inline-bgcolor=""> and</span><span data-offset-key="df910-164-0" data-darkreader-inline-bgcolor=""> access</span><span data-offset-key="df910-165-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-166-0" data-darkreader-inline-bgcolor=""> experiences</span><span data-offset-key="df910-167-0" data-darkreader-inline-bgcolor=""> in</span><span data-offset-key="df910-168-0" data-darkreader-inline-bgcolor=""> the</span><span data-offset-key="df910-169-0" data-darkreader-inline-bgcolor=""> physical</span><span data-offset-key="df910-170-0" data-darkreader-inline-bgcolor=""> and</span><span data-offset-key="df910-171-0" data-darkreader-inline-bgcolor=""> digital</span><span data-offset-key="df910-172-0" data-darkreader-inline-bgcolor=""> worlds</span><span data-offset-key="df910-173-0" data-darkreader-inline-bgcolor="">.</span><span data-offset-key="df910-174-0" data-darkreader-inline-bgcolor=""> For</span><span data-offset-key="df910-175-0" data-darkreader-inline-bgcolor=""> example</span><span data-offset-key="df910-176-0" data-darkreader-inline-bgcolor="">,</span><span data-offset-key="df910-177-0" data-darkreader-inline-bgcolor=""> a</span><span data-offset-key="df910-178-0" data-darkreader-inline-bgcolor=""> museum</span><span data-offset-key="df910-179-0" data-darkreader-inline-bgcolor=""> could</span><span data-offset-key="df910-180-0" data-darkreader-inline-bgcolor=""> use</span><span data-offset-key="df910-181-0" data-darkreader-inline-bgcolor=""> N</span><span data-offset-key="df910-182-0" data-darkreader-inline-bgcolor="">FT</span><span data-offset-key="df910-183-0" data-darkreader-inline-bgcolor="">s</span><span data-offset-key="df910-184-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-185-0" data-darkreader-inline-bgcolor=""> offer</span><span data-offset-key="df910-186-0" data-darkreader-inline-bgcolor=""> personalized</span><span data-offset-key="df910-187-0" data-darkreader-inline-bgcolor=""> tours</span><span data-offset-key="df910-188-0" data-darkreader-inline-bgcolor="">,</span><span data-offset-key="df910-189-0" data-darkreader-inline-bgcolor=""> early</span><span data-offset-key="df910-190-0" data-darkreader-inline-bgcolor=""> access</span><span data-offset-key="df910-191-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-192-0" data-darkreader-inline-bgcolor=""> exhibitions</span><span data-offset-key="df910-193-0" data-darkreader-inline-bgcolor="">,</span><span data-offset-key="df910-194-0" data-darkreader-inline-bgcolor=""> or</span><span data-offset-key="df910-195-0" data-darkreader-inline-bgcolor=""> discounts</span><span data-offset-key="df910-196-0" data-darkreader-inline-bgcolor=""> at</span><span data-offset-key="df910-197-0" data-darkreader-inline-bgcolor=""> the</span><span data-offset-key="df910-198-0" data-darkreader-inline-bgcolor=""> museum</span><span data-offset-key="df910-199-0" data-darkreader-inline-bgcolor=""> store</span><span data-offset-key="df910-200-0" data-darkreader-inline-bgcolor="">.</span></p>
 <p> </p>
 <p><span data-offset-key="df910-203-0" data-darkreader-inline-bgcolor="">Block</span><span data-offset-key="df910-204-0" data-darkreader-inline-bgcolor="">chain</span><span data-offset-key="df910-205-0" data-darkreader-inline-bgcolor=""> technology</span><span data-offset-key="df910-206-0" data-darkreader-inline-bgcolor=""> can</span><span data-offset-key="df910-207-0" data-darkreader-inline-bgcolor=""> also</span><span data-offset-key="df910-208-0" data-darkreader-inline-bgcolor=""> be</span><span data-offset-key="df910-209-0" data-darkreader-inline-bgcolor=""> used</span><span data-offset-key="df910-210-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-211-0" data-darkreader-inline-bgcolor=""> create</span><span data-offset-key="df910-212-0" data-darkreader-inline-bgcolor=""> a</span><span data-offset-key="df910-213-0" data-darkreader-inline-bgcolor=""> digital</span><span data-offset-key="df910-214-0" data-darkreader-inline-bgcolor=""> economy</span><span data-offset-key="df910-215-0" data-darkreader-inline-bgcolor=""> for</span><span data-offset-key="df910-216-0" data-darkreader-inline-bgcolor=""> your</span><span data-offset-key="df910-217-0" data-darkreader-inline-bgcolor=""> museum</span><span data-offset-key="df910-218-0" data-darkreader-inline-bgcolor="">.</span><span data-offset-key="df910-219-0" data-darkreader-inline-bgcolor=""> For</span><span data-offset-key="df910-220-0" data-darkreader-inline-bgcolor=""> example</span><span data-offset-key="df910-221-0" data-darkreader-inline-bgcolor="">,</span><span data-offset-key="df910-222-0" data-darkreader-inline-bgcolor=""> you</span><span data-offset-key="df910-223-0" data-darkreader-inline-bgcolor=""> could</span><span data-offset-key="df910-224-0" data-darkreader-inline-bgcolor=""> use</span><span data-offset-key="df910-225-0" data-darkreader-inline-bgcolor=""> the</span><span data-offset-key="df910-226-0" data-darkreader-inline-bgcolor=""> blockchain</span><span data-offset-key="df910-227-0" data-darkreader-inline-bgcolor=""> to</span><span data-offset-key="df910-228-0" data-darkreader-inline-bgcolor=""> issue</span><span data-offset-key="df910-229-0" data-darkreader-inline-bgcolor=""> and</span><span data-offset-key="df910-230-0" data-darkreader-inline-bgcolor=""> manage</span><span data-offset-key="df910-231-0" data-darkreader-inline-bgcolor=""> museum</span><span data-offset-key="df910-232-0" data-darkreader-inline-bgcolor=""> permits</span><span data-offset-key="df910-233-0" data-darkreader-inline-bgcolor="">.</span></p>
-<div id="skip-silence-bar"> </div>						</div>
-				</div>
-					</div>
-		</div>
-							</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-53ca54c elementor-section-full_width qode_elementor_container_inner animated-slow elementor-section-height-default elementor-section-height-default parallax_section_no elementor-invisible" data-id="53ca54c" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e2bdbba" data-id="e2bdbba" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-5a3b387 elementor-widget elementor-widget-bridge_blockquote" data-id="5a3b387" data-element_type="widget" data-widget_type="bridge_blockquote.default">
-				<div class="elementor-widget-container">
-			<blockquote class=" with_quote_icon">
+<div id="skip-silence-bar"> </div>
+</div></div>
+</div></div>
+</div></section><section class="elementor-section elementor-top-section elementor-element elementor-element-53ca54c elementor-section-full_width qode_elementor_container_inner animated-slow elementor-section-height-default elementor-section-height-default parallax_section_no elementor-invisible" data-id="53ca54c" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}"><div class="elementor-container elementor-column-gap-default"><div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e2bdbba" data-id="e2bdbba" data-element_type="column"><div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-5a3b387 elementor-widget elementor-widget-bridge_blockquote" data-id="5a3b387" data-element_type="widget" data-widget_type="bridge_blockquote.default"><div class="elementor-widget-container"><blockquote class=" with_quote_icon">
 <i class="fa fa-quote-right" style=""></i><h5 class="blockquote-text" style="">This would give visitors a way to purchase permits using cryptocurrency, and then use the permit to access sub-galleries or sub-experiences.</h5>
-</blockquote>		</div>
-				</div>
-				<div class="elementor-element elementor-element-24ab613 elementor-widget elementor-widget-spacer" data-id="24ab613" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-b9b4855 elementor-widget elementor-widget-text-editor" data-id="b9b4855" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>Location-based NFTs can also be used to provide exclusive benefits and access to experiences in the physical and digital worlds. For example, if a museum is located in a certain area, it could use NFTs to offer discounts or exclusive access to experiences in that area.</p>
+</blockquote></div></div>
+<div class="elementor-element elementor-element-24ab613 elementor-widget elementor-widget-spacer" data-id="24ab613" data-element_type="widget" data-widget_type="spacer.default"><div class="elementor-widget-container"><div class="elementor-spacer"><div class="elementor-spacer-inner"></div></div></div></div>
+<div class="elementor-element elementor-element-b9b4855 elementor-widget elementor-widget-text-editor" data-id="b9b4855" data-element_type="widget" data-widget_type="text-editor.default"><div class="elementor-widget-container">
+<p>Location-based NFTs can also be used to provide exclusive benefits and access to experiences in the physical and digital worlds. For example, if a museum is located in a certain area, it could use NFTs to offer discounts or exclusive access to experiences in that area.</p>
 <p> </p>
 <p>By using blockchain technology, museums can create a more engaging and personalized experience for visitors. So if you&#8217;re looking for ways to enhance your site experience, consider using the blockchain</p>
 <div id="skip-silence-bar"> </div>
 <div id="skip-silence-bar"> </div>
-<div id="skip-silence-bar"> </div>						</div>
-				</div>
-					</div>
-		</div>
-							</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-b1d1496 elementor-section-full_width qode_elementor_container_inner animated-fast elementor-section-height-default elementor-section-height-default parallax_section_no elementor-invisible" data-id="b1d1496" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;slideInUp&quot;,&quot;animation_delay&quot;:100}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ad903d4" data-id="ad903d4" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-9e6b473 elementor-widget elementor-widget-heading" data-id="9e6b473" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Custom Json Structure</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-8ebc96f elementor-widget elementor-widget-spacer" data-id="8ebc96f" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-d363bac elementor-widget elementor-widget-heading" data-id="d363bac" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h3 class="elementor-heading-title elementor-size-default">The progress proof system</h3>		</div>
-				</div>
-				<div class="elementor-element elementor-element-ed5777f elementor-widget elementor-widget-spacer" data-id="ed5777f" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-6599bf9 elementor-widget elementor-widget-text-editor" data-id="6599bf9" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>NFTs can be used to track progress, which is an excellent way to keep track of a project or team. It can also be used to track the decisions of a group of individuals or an individual&#8217;s growth. People that achieved their aims should be rewarded in order to improve their reputation.</p>
+<div id="skip-silence-bar"> </div>
+</div></div>
+</div></div></div></section><section class="elementor-section elementor-top-section elementor-element elementor-element-b1d1496 elementor-section-full_width qode_elementor_container_inner animated-fast elementor-section-height-default elementor-section-height-default parallax_section_no elementor-invisible" data-id="b1d1496" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;slideInUp&quot;,&quot;animation_delay&quot;:100}"><div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ad903d4" data-id="ad903d4" data-element_type="column"><div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-9e6b473 elementor-widget elementor-widget-heading" data-id="9e6b473" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h6 class="elementor-heading-title elementor-size-default">Custom Json Structure</h6></div></div>
+<div class="elementor-element elementor-element-8ebc96f elementor-widget elementor-widget-spacer" data-id="8ebc96f" data-element_type="widget" data-widget_type="spacer.default"><div class="elementor-widget-container"><div class="elementor-spacer"><div class="elementor-spacer-inner"></div></div></div></div>
+<div class="elementor-element elementor-element-d363bac elementor-widget elementor-widget-heading" data-id="d363bac" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">The progress proof system</h3></div></div>
+<div class="elementor-element elementor-element-ed5777f elementor-widget elementor-widget-spacer" data-id="ed5777f" data-element_type="widget" data-widget_type="spacer.default"><div class="elementor-widget-container"><div class="elementor-spacer"><div class="elementor-spacer-inner"></div></div></div></div>
+<div class="elementor-element elementor-element-6599bf9 elementor-widget elementor-widget-text-editor" data-id="6599bf9" data-element_type="widget" data-widget_type="text-editor.default"><div class="elementor-widget-container">
+<p>NFTs can be used to track progress, which is an excellent way to keep track of a project or team. It can also be used to track the decisions of a group of individuals or an individual&#8217;s growth. People that achieved their aims should be rewarded in order to improve their reputation.</p>
 <p> </p>
 <p>Decisions taken in a video game can be kept as historical NFTS recordings, and the game&#8217;s outcome is influenced by the choices made by the whole universe of players.</p>
 <p> </p>
 <p>This means that every player has the ability to affect the direction of the game, and that the game is always evolving as a result of player decisions. This results in an unique and dynamic gaming experience.</p>
 <div id="skip-silence-bar"> </div>
-<div id="skip-silence-bar"> </div>						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2c0f7e6" data-id="2c0f7e6" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-55afc3a elementor-widget elementor-widget-image" data-id="55afc3a" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img width="553" height="437" src="./../wp-content/uploads/2021/05/services-image-2a.jpg" class="attachment-large size-large" alt="j" loading="lazy" srcset="./../wp-content/uploads/2021/05/services-image-2a.jpg 553w, ./../wp-content/uploads/2021/05/services-image-2a-300x237.jpg 300w" sizes="(max-width: 553px) 100vw, 553px">															</div>
-				</div>
-					</div>
-		</div>
-							</div>
-		</section>
-							</div>
-												 
-												</div>
-	</div>
-				
-	</div>
-</div>
-
-
-
-	<footer>
-		<div class="footer_inner clearfix">
-				<div class="footer_top_holder">
-            			<div class="footer_top">
-								<div class="container">
-					<div class="container_inner">
-																	<div class="four_columns clearfix">
-								<div class="column1 footer_col1">
-									<div class="column_inner">
-										<div id="media_image-2" class="widget widget_media_image"><img width="84" height="17" src="./../wp-content/uploads/2021/05/footer-logo.png" class="image wp-image-37  attachment-full size-full" alt="e" loading="lazy" style="max-width: 100%; height: auto;"></div>
+<div id="skip-silence-bar"> </div>
+</div></div>
+</div></div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2c0f7e6" data-id="2c0f7e6" data-element_type="column"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-55afc3a elementor-widget elementor-widget-image" data-id="55afc3a" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"> <img width="553" height="437" src="./../wp-content/uploads/2021/05/services-image-2a.jpg" class="attachment-large size-large" alt="j" loading="lazy" srcset="./../wp-content/uploads/2021/05/services-image-2a.jpg 553w, ./../wp-content/uploads/2021/05/services-image-2a-300x237.jpg 300w" sizes="(max-width: 553px) 100vw, 553px">
+</div></div></div></div>
+</div></section>
+</div></div></div>
+</div></div>
+<footer><div class="footer_inner clearfix">
+<div class="footer_top_holder"><div class="footer_top"><div class="container"><div class="container_inner"><div class="four_columns clearfix">
+<div class="column1 footer_col1"><div class="column_inner">
+<div id="media_image-2" class="widget widget_media_image"><img width="84" height="17" src="./../wp-content/uploads/2021/05/footer-logo.png" class="image wp-image-37  attachment-full size-full" alt="e" loading="lazy" style="max-width: 100%; height: auto;"></div>
 <div class="widget qode_separator_widget" style="margin-bottom: 13px;"></div>
-<div id="text-4" class="widget widget_text">			<div class="textwidget">
-<p>Lorem ipsum dolor sit amet, consyect etur<br>
-adipiscing elit. Quisque actraqum nunc no<br>
-dolor sit amet augue dolor. </p>
-</div>
-		</div>
+<div id="text-4" class="widget widget_text"><div class="textwidget"><p>Lorem ipsum dolor sit amet, consyect etur<br> adipiscing elit. Quisque actraqum nunc no<br> dolor sit amet augue dolor.</p></div></div>
 <div class="widget qode_separator_widget" style="margin-bottom: 20px;"></div>
-<span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://twitter.com/QodeInteractive" target="_blank"><i class="qode_icon_font_awesome fa fa-twitter  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.facebook.com/QodeInteractive/" target="_blank"><i class="qode_icon_font_awesome fa fa-facebook  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.pinterest.com/qodeinteractive/_created/" target="_blank"><i class="qode_icon_font_awesome fa fa-pinterest  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.youtube.com/channel/UC-h62vMXD5aZV5zAULD-SuA" target="_blank"><i class="qode_icon_font_awesome fa fa-youtube  simple_social" style="color: #fff;font-size: 18px;"></i></a></span>									</div>
-								</div>
-								<div class="column2 footer_col2">
-									<div class="column_inner">
-										<div id="text-5" class="widget widget_text">
-<h5>Contact Info</h5>			<div class="textwidget"></div>
-		</div>
+<span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://twitter.com/QodeInteractive" target="_blank"><i class="qode_icon_font_awesome fa fa-twitter  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.facebook.com/QodeInteractive/" target="_blank"><i class="qode_icon_font_awesome fa fa-facebook  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.pinterest.com/qodeinteractive/_created/" target="_blank"><i class="qode_icon_font_awesome fa fa-pinterest  simple_social" style="color: #fff;margin: 0 30px 0 0;font-size: 18px;"></i></a></span><span class="q_social_icon_holder normal_social" data-color="#fff" data-hover-color="#f57d05"><a itemprop="url" href="https://www.youtube.com/channel/UC-h62vMXD5aZV5zAULD-SuA" target="_blank"><i class="qode_icon_font_awesome fa fa-youtube  simple_social" style="color: #fff;font-size: 18px;"></i></a></span>
+</div></div>
+<div class="column2 footer_col2"><div class="column_inner">
+<div id="text-5" class="widget widget_text">
+<h5>Contact Info</h5>
+<div class="textwidget"></div>
+</div>
 <div class="widget qode_icon_with_text_widget"><div class="q_icon_with_title tiny normal_icon qode-iwt-content-alignment-left ">
 <div class="icon_holder " style=" "><span data-icon-type="normal" style="font-size: 20px;" class="qode_iwt_icon_holder q_font_awsome_icon fa-lg  "><i class="qode_icon_font_awesome fa fa-home qode_iwt_icon_element" style="color: #ffffff;"></i></span></div>
 <div class="icon_text_holder"><div class="icon_text_inner">
@@ -431,72 +1012,21 @@ dolor sit amet augue dolor. </p>
 <p style=""></p>
 <a itemprop="url" class="icon_with_title_link" href="tel:+8801010000000" target="_self">+88 (0) 101 0000 000</a>
 </div></div>
-</div></div>									</div>
-								</div>
-								<div class="column3 footer_col3">
-									<div class="column_inner">
-										<div id="qode_twitter_widget-2" class="widget widget_qode_twitter_widget">It seems that you haven&#039;t connected with your Twitter account</div>									</div>
-								</div>
-								<div class="column4 footer_col4">
-									<div class="column_inner">
-										<div id="text-6" class="widget widget_text">
-<h5>Support &#038; Downloads</h5>			<div class="textwidget">
-<p>Quisque actraqum nunc no dolor sit amet augue dolor. Lorem ipsum dolor sit amet, consyect etur adipiscing elit.</p>
+</div></div>
+</div></div>
+<div class="column3 footer_col3"><div class="column_inner"><div id="qode_twitter_widget-2" class="widget widget_qode_twitter_widget">It seems that you haven&#039;t connected with your Twitter account</div></div></div>
+<div class="column4 footer_col4"><div class="column_inner">
+<div id="text-6" class="widget widget_text">
+<h5>Support &#038; Downloads</h5>
+<div class="textwidget"><p>Quisque actraqum nunc no dolor sit amet augue dolor. Lorem ipsum dolor sit amet, consyect etur adipiscing elit.</p></div>
 </div>
-		</div>
 <div class="widget qode_separator_widget" style="margin-bottom: 31px;"></div>
 <div id="media_image-5" class="widget widget_media_image"><img width="139" height="42" src="./../wp-content/uploads/2021/05/footer-image-1.png" class="image wp-image-216  attachment-full size-full" alt="c" loading="lazy" style="max-width: 100%; height: auto;"></div>
-<div id="media_image-6" class="widget widget_media_image"><img width="139" height="42" src="./../wp-content/uploads/2021/05/footer-image-2.png" class="image wp-image-217  attachment-full size-full" alt="d" loading="lazy" style="max-width: 100%; height: auto;"></div>									</div>
-								</div>
-							</div>
-															</div>
-				</div>
-							</div>
-					</div>
-							<div class="footer_bottom_holder">
-                									<div class="footer_bottom">
-							<div class="textwidget">
-<p class="qode-footer-copyright">Copyright @ <a href="https://qodeinteractive.com/" target="_blank" rel="nofollow noopener">Qode Interactive 2021</a></p>
-</div>
-					</div>
-								</div>
-				</div>
-	</footer>
-		
-</div>
-</div>
-
-		<script>
-			window.RS_MODULES = window.RS_MODULES || {};
-			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
-			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
-			window.RS_MODULES.defered = true;
-			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
-			window.RS_MODULES.type = 'compiled';
-		</script>
-		<link rel="stylesheet" id="wpo_min-footer-0-css" href="./../wp-content/cache/wpo-minify/1653332029/assets/wpo-minify-footer-8b2816cc.min.css" type="text/css" media="all">
-<script type="text/javascript" id="mediaelement-js-extra">
-/* <![CDATA[ */
-var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
-/* ]]> */
-</script>
-<script type="text/javascript" id="wpo_min-footer-0-js-extra">
-/* <![CDATA[ */
-var qodefQiAddonsGlobal = {"vars":{"adminBarHeight":0,"iconArrowLeft":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 34.2 32.3\" xml:space=\"preserve\" style=\"stroke-width: 2;\"><line x1=\"0.5\" y1=\"16\" x2=\"33.5\" y2=\"16\"\/><line x1=\"0.3\" y1=\"16.5\" x2=\"16.2\" y2=\"0.7\"\/><line x1=\"0\" y1=\"15.4\" x2=\"16.2\" y2=\"31.6\"\/><\/svg>","iconArrowRight":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 34.2 32.3\" xml:space=\"preserve\" style=\"stroke-width: 2;\"><line x1=\"0\" y1=\"16\" x2=\"33\" y2=\"16\"\/><line x1=\"17.3\" y1=\"0.7\" x2=\"33.2\" y2=\"16.5\"\/><line x1=\"17.3\" y1=\"31.6\" x2=\"33.5\" y2=\"15.4\"\/><\/svg>","iconClose":"<svg  xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 9.1 9.1\" xml:space=\"preserve\"><g><path d=\"M8.5,0L9,0.6L5.1,4.5L9,8.5L8.5,9L4.5,5.1L0.6,9L0,8.5L4,4.5L0,0.6L0.6,0L4.5,4L8.5,0z\"\/><\/g><\/svg>"}};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./../wp-content/cache/wpo-minify/1653332029/assets/wpo-minify-footer-a12b5180.min.js" id="wpo_min-footer-0-js"></script>
-<script type="text/javascript" src="./../wp-content/cache/wpo-minify/1653332029/assets/wpo-minify-footer-74d10fea.min.js" id="wpo_min-footer-1-js"></script>
-<script type="text/javascript" src="./../wp-includes/js/mediaelement/wp-mediaelement.min.js" id="wp-mediaelement-js"></script>
-<script type="text/javascript" id="wpo_min-footer-3-js-extra">
-/* <![CDATA[ */
-var QodeAdminAjax = {"ajaxurl":".\/wp-admin\/admin-ajax.php"};
-var qodeGlobalVars = {"vars":{"qodeAddingToCartLabel":"Adding to Cart...","page_scroll_amount_for_sticky":""}};
-var vcData = {"currentTheme":{"slug":"bridge"}};
-var qodeLike = {"ajaxurl":".\/wp-admin\/admin-ajax.php"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="./../wp-content/cache/wpo-minify/1653332029/assets/wpo-minify-footer-4e8ad89a.min.js" id="wpo_min-footer-3-js"></script>
-<script type="text/javascript" src="./../wp-content/cache/wpo-minify/1653332029/assets/wpo-minify-footer-7df13ad9.min.js" id="wpo_min-footer-4-js"></script>
-</body>
+<div id="media_image-6" class="widget widget_media_image"><img width="139" height="42" src="./../wp-content/uploads/2021/05/footer-image-2.png" class="image wp-image-217  attachment-full size-full" alt="d" loading="lazy" style="max-width: 100%; height: auto;"></div>
+</div></div>
+</div></div></div></div></div>
+<div class="footer_bottom_holder"><div class="footer_bottom"><div class="textwidget"><p class="qode-footer-copyright">Copyright @ <a href="https://qodeinteractive.com/" target="_blank" rel="nofollow noopener">Qode Interactive 2021</a></p></div></div></div>
+</div></footer>
+</div></div>
+<style id="rs-plugin-settings-inline-css" type="text/css">#rs-demo-id {}</style> <script defer type="text/javascript" src="./../wp-includes/js/jquery/ui/core.min.js?ver=1.13.1" id="jquery-ui-core-js"></script> <script defer id="qi-addons-for-elementor-script-js-extra" src="data:text/javascript;base64,Ci8qIDwhW0NEQVRBWyAqLwp2YXIgcW9kZWZRaUFkZG9uc0dsb2JhbCA9IHsidmFycyI6eyJhZG1pbkJhckhlaWdodCI6MCwiaWNvbkFycm93TGVmdCI6IjxzdmcgIHhtbG5zPVwiaHR0cDpcL1wvd3d3LnczLm9yZ1wvMjAwMFwvc3ZnXCIgeG1sbnM6eGxpbms9XCJodHRwOlwvXC93d3cudzMub3JnXC8xOTk5XC94bGlua1wiIHg9XCIwcHhcIiB5PVwiMHB4XCIgdmlld0JveD1cIjAgMCAzNC4yIDMyLjNcIiB4bWw6c3BhY2U9XCJwcmVzZXJ2ZVwiIHN0eWxlPVwic3Ryb2tlLXdpZHRoOiAyO1wiPjxsaW5lIHgxPVwiMC41XCIgeTE9XCIxNlwiIHgyPVwiMzMuNVwiIHkyPVwiMTZcIlwvPjxsaW5lIHgxPVwiMC4zXCIgeTE9XCIxNi41XCIgeDI9XCIxNi4yXCIgeTI9XCIwLjdcIlwvPjxsaW5lIHgxPVwiMFwiIHkxPVwiMTUuNFwiIHgyPVwiMTYuMlwiIHkyPVwiMzEuNlwiXC8+PFwvc3ZnPiIsImljb25BcnJvd1JpZ2h0IjoiPHN2ZyAgeG1sbnM9XCJodHRwOlwvXC93d3cudzMub3JnXC8yMDAwXC9zdmdcIiB4bWxuczp4bGluaz1cImh0dHA6XC9cL3d3dy53My5vcmdcLzE5OTlcL3hsaW5rXCIgeD1cIjBweFwiIHk9XCIwcHhcIiB2aWV3Qm94PVwiMCAwIDM0LjIgMzIuM1wiIHhtbDpzcGFjZT1cInByZXNlcnZlXCIgc3R5bGU9XCJzdHJva2Utd2lkdGg6IDI7XCI+PGxpbmUgeDE9XCIwXCIgeTE9XCIxNlwiIHgyPVwiMzNcIiB5Mj1cIjE2XCJcLz48bGluZSB4MT1cIjE3LjNcIiB5MT1cIjAuN1wiIHgyPVwiMzMuMlwiIHkyPVwiMTYuNVwiXC8+PGxpbmUgeDE9XCIxNy4zXCIgeTE9XCIzMS42XCIgeDI9XCIzMy41XCIgeTI9XCIxNS40XCJcLz48XC9zdmc+IiwiaWNvbkNsb3NlIjoiPHN2ZyAgeG1sbnM9XCJodHRwOlwvXC93d3cudzMub3JnXC8yMDAwXC9zdmdcIiB4bWxuczp4bGluaz1cImh0dHA6XC9cL3d3dy53My5vcmdcLzE5OTlcL3hsaW5rXCIgeD1cIjBweFwiIHk9XCIwcHhcIiB2aWV3Qm94PVwiMCAwIDkuMSA5LjFcIiB4bWw6c3BhY2U9XCJwcmVzZXJ2ZVwiPjxnPjxwYXRoIGQ9XCJNOC41LDBMOSwwLjZMNS4xLDQuNUw5LDguNUw4LjUsOUw0LjUsNS4xTDAuNiw5TDAsOC41TDQsNC41TDAsMC42TDAuNiwwTDQuNSw0TDguNSwwelwiXC8+PFwvZz48XC9zdmc+In19OwovKiBdXT4gKi8K"></script> <script defer type="text/javascript" src="./../wp-content/plugins/qi-addons-for-elementor/assets/js/main.min.js?ver=6.0" id="qi-addons-for-elementor-script-js"></script> <script defer type="text/javascript" src="./../wp-includes/js/jquery/ui/accordion.min.js?ver=1.13.1" id="jquery-ui-accordion-js"></script> <script defer type="text/javascript" src="./../wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.1" id="jquery-ui-tabs-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_eae574630691cbf72e5796b9d7572260.js?ver=6.0" id="doubleTapToGo-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/modernizr.min.js?ver=6.0" id="modernizr-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_72f19f5f564a43b1175f9ce86981987c.js?ver=6.0" id="appear-js"></script> <script defer type="text/javascript" src="./../wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_d5b41c85347745f9b6a2275abd5ad84b.js?ver=6.0" id="counter-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_6d86e8c33e221a30c409dd9510bc66b1.js?ver=6.0" id="easyPieChart-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_da79e5d89801c31d6c4fc14c4b4b2331.js?ver=6.0" id="mixItUp-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_95ba7bb2e3c9da8d1322daadc7ce2457.js?ver=6.0" id="prettyphoto-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_475ac0afef0a66cbb04b44c64c65d78a.js?ver=6.0" id="fitvids-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.flexslider-min.js?ver=6.0" id="flexslider-js"></script> <script defer id="mediaelement-core-js-before" src="data:text/javascript;base64,CnZhciBtZWpzTDEwbiA9IHsibGFuZ3VhZ2UiOiJlbiIsInN0cmluZ3MiOnsibWVqcy5kb3dubG9hZC1maWxlIjoiRG93bmxvYWQgRmlsZSIsIm1lanMuaW5zdGFsbC1mbGFzaCI6IllvdSBhcmUgdXNpbmcgYSBicm93c2VyIHRoYXQgZG9lcyBub3QgaGF2ZSBGbGFzaCBwbGF5ZXIgZW5hYmxlZCBvciBpbnN0YWxsZWQuIFBsZWFzZSB0dXJuIG9uIHlvdXIgRmxhc2ggcGxheWVyIHBsdWdpbiBvciBkb3dubG9hZCB0aGUgbGF0ZXN0IHZlcnNpb24gZnJvbSBodHRwczpcL1wvZ2V0LmFkb2JlLmNvbVwvZmxhc2hwbGF5ZXJcLyIsIm1lanMuZnVsbHNjcmVlbiI6IkZ1bGxzY3JlZW4iLCJtZWpzLnBsYXkiOiJQbGF5IiwibWVqcy5wYXVzZSI6IlBhdXNlIiwibWVqcy50aW1lLXNsaWRlciI6IlRpbWUgU2xpZGVyIiwibWVqcy50aW1lLWhlbHAtdGV4dCI6IlVzZSBMZWZ0XC9SaWdodCBBcnJvdyBrZXlzIHRvIGFkdmFuY2Ugb25lIHNlY29uZCwgVXBcL0Rvd24gYXJyb3dzIHRvIGFkdmFuY2UgdGVuIHNlY29uZHMuIiwibWVqcy5saXZlLWJyb2FkY2FzdCI6IkxpdmUgQnJvYWRjYXN0IiwibWVqcy52b2x1bWUtaGVscC10ZXh0IjoiVXNlIFVwXC9Eb3duIEFycm93IGtleXMgdG8gaW5jcmVhc2Ugb3IgZGVjcmVhc2Ugdm9sdW1lLiIsIm1lanMudW5tdXRlIjoiVW5tdXRlIiwibWVqcy5tdXRlIjoiTXV0ZSIsIm1lanMudm9sdW1lLXNsaWRlciI6IlZvbHVtZSBTbGlkZXIiLCJtZWpzLnZpZGVvLXBsYXllciI6IlZpZGVvIFBsYXllciIsIm1lanMuYXVkaW8tcGxheWVyIjoiQXVkaW8gUGxheWVyIiwibWVqcy5jYXB0aW9ucy1zdWJ0aXRsZXMiOiJDYXB0aW9uc1wvU3VidGl0bGVzIiwibWVqcy5jYXB0aW9ucy1jaGFwdGVycyI6IkNoYXB0ZXJzIiwibWVqcy5ub25lIjoiTm9uZSIsIm1lanMuYWZyaWthYW5zIjoiQWZyaWthYW5zIiwibWVqcy5hbGJhbmlhbiI6IkFsYmFuaWFuIiwibWVqcy5hcmFiaWMiOiJBcmFiaWMiLCJtZWpzLmJlbGFydXNpYW4iOiJCZWxhcnVzaWFuIiwibWVqcy5idWxnYXJpYW4iOiJCdWxnYXJpYW4iLCJtZWpzLmNhdGFsYW4iOiJDYXRhbGFuIiwibWVqcy5jaGluZXNlIjoiQ2hpbmVzZSIsIm1lanMuY2hpbmVzZS1zaW1wbGlmaWVkIjoiQ2hpbmVzZSAoU2ltcGxpZmllZCkiLCJtZWpzLmNoaW5lc2UtdHJhZGl0aW9uYWwiOiJDaGluZXNlIChUcmFkaXRpb25hbCkiLCJtZWpzLmNyb2F0aWFuIjoiQ3JvYXRpYW4iLCJtZWpzLmN6ZWNoIjoiQ3plY2giLCJtZWpzLmRhbmlzaCI6IkRhbmlzaCIsIm1lanMuZHV0Y2giOiJEdXRjaCIsIm1lanMuZW5nbGlzaCI6IkVuZ2xpc2giLCJtZWpzLmVzdG9uaWFuIjoiRXN0b25pYW4iLCJtZWpzLmZpbGlwaW5vIjoiRmlsaXBpbm8iLCJtZWpzLmZpbm5pc2giOiJGaW5uaXNoIiwibWVqcy5mcmVuY2giOiJGcmVuY2giLCJtZWpzLmdhbGljaWFuIjoiR2FsaWNpYW4iLCJtZWpzLmdlcm1hbiI6Ikdlcm1hbiIsIm1lanMuZ3JlZWsiOiJHcmVlayIsIm1lanMuaGFpdGlhbi1jcmVvbGUiOiJIYWl0aWFuIENyZW9sZSIsIm1lanMuaGVicmV3IjoiSGVicmV3IiwibWVqcy5oaW5kaSI6IkhpbmRpIiwibWVqcy5odW5nYXJpYW4iOiJIdW5nYXJpYW4iLCJtZWpzLmljZWxhbmRpYyI6IkljZWxhbmRpYyIsIm1lanMuaW5kb25lc2lhbiI6IkluZG9uZXNpYW4iLCJtZWpzLmlyaXNoIjoiSXJpc2giLCJtZWpzLml0YWxpYW4iOiJJdGFsaWFuIiwibWVqcy5qYXBhbmVzZSI6IkphcGFuZXNlIiwibWVqcy5rb3JlYW4iOiJLb3JlYW4iLCJtZWpzLmxhdHZpYW4iOiJMYXR2aWFuIiwibWVqcy5saXRodWFuaWFuIjoiTGl0aHVhbmlhbiIsIm1lanMubWFjZWRvbmlhbiI6Ik1hY2Vkb25pYW4iLCJtZWpzLm1hbGF5IjoiTWFsYXkiLCJtZWpzLm1hbHRlc2UiOiJNYWx0ZXNlIiwibWVqcy5ub3J3ZWdpYW4iOiJOb3J3ZWdpYW4iLCJtZWpzLnBlcnNpYW4iOiJQZXJzaWFuIiwibWVqcy5wb2xpc2giOiJQb2xpc2giLCJtZWpzLnBvcnR1Z3Vlc2UiOiJQb3J0dWd1ZXNlIiwibWVqcy5yb21hbmlhbiI6IlJvbWFuaWFuIiwibWVqcy5ydXNzaWFuIjoiUnVzc2lhbiIsIm1lanMuc2VyYmlhbiI6IlNlcmJpYW4iLCJtZWpzLnNsb3ZhayI6IlNsb3ZhayIsIm1lanMuc2xvdmVuaWFuIjoiU2xvdmVuaWFuIiwibWVqcy5zcGFuaXNoIjoiU3BhbmlzaCIsIm1lanMuc3dhaGlsaSI6IlN3YWhpbGkiLCJtZWpzLnN3ZWRpc2giOiJTd2VkaXNoIiwibWVqcy50YWdhbG9nIjoiVGFnYWxvZyIsIm1lanMudGhhaSI6IlRoYWkiLCJtZWpzLnR1cmtpc2giOiJUdXJraXNoIiwibWVqcy51a3JhaW5pYW4iOiJVa3JhaW5pYW4iLCJtZWpzLnZpZXRuYW1lc2UiOiJWaWV0bmFtZXNlIiwibWVqcy53ZWxzaCI6IldlbHNoIiwibWVqcy55aWRkaXNoIjoiWWlkZGlzaCJ9fTsK"></script> <script defer type="text/javascript" src="./../wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.16" id="mediaelement-core-js"></script> <script defer type="text/javascript" src="./../wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=6.0" id="mediaelement-migrate-js"></script> <script defer id="mediaelement-js-extra" src="data:text/javascript;base64,Ci8qIDwhW0NEQVRBWyAqLwp2YXIgX3dwbWVqc1NldHRpbmdzID0geyJwbHVnaW5QYXRoIjoiXC93cC1pbmNsdWRlc1wvanNcL21lZGlhZWxlbWVudFwvIiwiY2xhc3NQcmVmaXgiOiJtZWpzLSIsInN0cmV0Y2hpbmciOiJyZXNwb25zaXZlIn07Ci8qIF1dPiAqLwo="></script> <script defer type="text/javascript" src="./../wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=6.0" id="wp-mediaelement-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/infinitescroll.min.js?ver=6.0" id="infiniteScroll-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_f556337e0f81cf84d8e083a0a0c07ea4.js?ver=6.0" id="waitforimages-js"></script> <script defer type="text/javascript" src="./../wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0" id="jquery-form-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/waypoints.min.js?ver=6.0" id="waypoints-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jplayer.min.js?ver=6.0" id="jplayer-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_4d0379f34605a637fc1fe32344a29096.js?ver=6.0" id="bootstrapCarousel-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_3637fe9df875e14939193bc389e1a249.js?ver=6.0" id="skrollr-js"></script> <script defer type="text/javascript" src="./../wp-content/plugins/qi-addons-for-elementor/inc/shortcodes/charts/assets/js/plugins/Chart.min.js?ver=1" id="chart-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_38ade284e1c3428a4f273a5d7d253946.js?ver=6.0" id="easing-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_b069611efe4105113881d6eda1ea9765.js?ver=6.0" id="abstractBaseClass-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_9838d1a5b6ef93abeecb76ae6308505f.js?ver=6.0" id="countdown-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.multiscroll.min.js?ver=6.0" id="multiscroll-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.justifiedGallery.min.js?ver=6.0" id="justifiedGallery-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_417dc6f4e0f100a3c3be578d7f6f4174.js?ver=6.0" id="bigtext-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.sticky-kit.min.js?ver=6.0" id="stickyKit-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/owl.carousel.min.js?ver=6.0" id="owlCarousel-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_5d0fc7d20067e1f9507a3649c5787552.js?ver=1" id="typed-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/fluidvids.min.js?ver=6.0" id="fluidvids-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.carouFredSel-6.2.1.min.js?ver=6.0" id="carouFredSel-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/lemmon-slider.min.js?ver=6.0" id="lemmonSlider-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.fullPage.min.js?ver=6.0" id="one_page_scroll-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.mousewheel.min.js?ver=6.0" id="mousewheel-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.touchSwipe.min.js?ver=6.0" id="touchSwipe-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/jquery.isotope.min.js?ver=6.0" id="isotope-js"></script> <script defer type="text/javascript" src="./../wp-content/plugins/qi-addons-for-elementor/inc/masonry/assets/js/plugins/packery-mode.pkgd.min.js?ver=6.0" id="packery-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_33ce418cee8273af0cfd13c55bf91b05.js?ver=6.0" id="stretch-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_9ae82f0efe3e33139fecb89cfee71c08.js?ver=6.0" id="imagesLoaded-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/rangeslider.min.js?ver=6.0" id="rangeSlider-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_3ab5f5c9566d78e5ff0cd9c14558ca28.js?ver=6.0" id="eventMove-js"></script> <script defer type="text/javascript" src="./../wp-includes/js/jquery/ui/effect.min.js?ver=1.13.1" id="jquery-effects-core-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_e9e0f377ee262523263ca030883201b1.js?ver=6.0" id="twentytwenty-js"></script> <script defer type="text/javascript" src="./../wp-content/plugins/qi-addons-for-elementor/assets/plugins/swiper/swiper.min.js?ver=6.0" id="swiper-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/TweenLite.min.js?ver=6.0" id="TweenLite-js"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/smoothPageScroll.min.js?ver=6.0" id="smoothPageScroll-js"></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_d45d692b2aca971cc7e26717e2d20574.js?ver=1652677738" id="bridge-default-dynamic-js"></script> <script defer id="bridge-default-js-extra" src="data:text/javascript;base64,Ci8qIDwhW0NEQVRBWyAqLwp2YXIgUW9kZUFkbWluQWpheCA9IHsiYWpheHVybCI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvd3AtYWRtaW5cL2FkbWluLWFqYXgucGhwIn07CnZhciBxb2RlR2xvYmFsVmFycyA9IHsidmFycyI6eyJxb2RlQWRkaW5nVG9DYXJ0TGFiZWwiOiJBZGRpbmcgdG8gQ2FydC4uLiIsInBhZ2Vfc2Nyb2xsX2Ftb3VudF9mb3Jfc3RpY2t5IjoiIn19OwovKiBdXT4gKi8K"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/default.min.js?ver=6.0" id="bridge-default-js"></script> <script defer type="text/javascript" src="./../wp-includes/js/comment-reply.min.js?ver=6.0" id="comment-reply-js"></script> <script defer id="wpb_composer_front_js-js-extra" src="data:text/javascript;base64,Ci8qIDwhW0NEQVRBWyAqLwp2YXIgdmNEYXRhID0geyJjdXJyZW50VGhlbWUiOnsic2x1ZyI6ImJyaWRnZSJ9fTsKLyogXV0+ICovCg=="></script> <script defer type="text/javascript" src="./../wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.9.0" id="wpb_composer_front_js-js"></script> <script defer id="qode-like-js-extra" src="data:text/javascript;base64,Ci8qIDwhW0NEQVRBWyAqLwp2YXIgcW9kZUxpa2UgPSB7ImFqYXh1cmwiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3dwLWFkbWluXC9hZG1pbi1hamF4LnBocCJ9OwovKiBdXT4gKi8K"></script> <script defer type="text/javascript" src="./../wp-content/themes/bridge/js/plugins/qode-like.min.js?ver=6.0" id="qode-like-js"></script> <script defer type="text/javascript" src="./../wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.6.5" id="elementor-webpack-runtime-js"></script> <script defer type="text/javascript" src="./../wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.6.5" id="elementor-frontend-modules-js"></script> <script defer type="text/javascript" src="./../wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script> <script defer id="elementor-frontend-js-before" src="data:text/javascript;base64,CnZhciBlbGVtZW50b3JGcm9udGVuZENvbmZpZyA9IHsiZW52aXJvbm1lbnRNb2RlIjp7ImVkaXQiOmZhbHNlLCJ3cFByZXZpZXciOmZhbHNlLCJpc1NjcmlwdERlYnVnIjpmYWxzZX0sImkxOG4iOnsic2hhcmVPbkZhY2Vib29rIjoiU2hhcmUgb24gRmFjZWJvb2siLCJzaGFyZU9uVHdpdHRlciI6IlNoYXJlIG9uIFR3aXR0ZXIiLCJwaW5JdCI6IlBpbiBpdCIsImRvd25sb2FkIjoiRG93bmxvYWQiLCJkb3dubG9hZEltYWdlIjoiRG93bmxvYWQgaW1hZ2UiLCJmdWxsc2NyZWVuIjoiRnVsbHNjcmVlbiIsInpvb20iOiJab29tIiwic2hhcmUiOiJTaGFyZSIsInBsYXlWaWRlbyI6IlBsYXkgVmlkZW8iLCJwcmV2aW91cyI6IlByZXZpb3VzIiwibmV4dCI6Ik5leHQiLCJjbG9zZSI6IkNsb3NlIn0sImlzX3J0bCI6ZmFsc2UsImJyZWFrcG9pbnRzIjp7InhzIjowLCJzbSI6NDgwLCJtZCI6NzY4LCJsZyI6MTAyNSwieGwiOjE0NDAsInh4bCI6MTYwMH0sInJlc3BvbnNpdmUiOnsiYnJlYWtwb2ludHMiOnsibW9iaWxlIjp7ImxhYmVsIjoiTW9iaWxlIiwidmFsdWUiOjc2NywiZGVmYXVsdF92YWx1ZSI6NzY3LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjp0cnVlfSwibW9iaWxlX2V4dHJhIjp7ImxhYmVsIjoiTW9iaWxlIEV4dHJhIiwidmFsdWUiOjg4MCwiZGVmYXVsdF92YWx1ZSI6ODgwLCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjpmYWxzZX0sInRhYmxldCI6eyJsYWJlbCI6IlRhYmxldCIsInZhbHVlIjoxMDI0LCJkZWZhdWx0X3ZhbHVlIjoxMDI0LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjp0cnVlfSwidGFibGV0X2V4dHJhIjp7ImxhYmVsIjoiVGFibGV0IEV4dHJhIiwidmFsdWUiOjEyMDAsImRlZmF1bHRfdmFsdWUiOjEyMDAsImRpcmVjdGlvbiI6Im1heCIsImlzX2VuYWJsZWQiOmZhbHNlfSwibGFwdG9wIjp7ImxhYmVsIjoiTGFwdG9wIiwidmFsdWUiOjEzNjYsImRlZmF1bHRfdmFsdWUiOjEzNjYsImRpcmVjdGlvbiI6Im1heCIsImlzX2VuYWJsZWQiOmZhbHNlfSwid2lkZXNjcmVlbiI6eyJsYWJlbCI6IldpZGVzY3JlZW4iLCJ2YWx1ZSI6MjQwMCwiZGVmYXVsdF92YWx1ZSI6MjQwMCwiZGlyZWN0aW9uIjoibWluIiwiaXNfZW5hYmxlZCI6ZmFsc2V9fX0sInZlcnNpb24iOiIzLjYuNSIsImlzX3N0YXRpYyI6ZmFsc2UsImV4cGVyaW1lbnRhbEZlYXR1cmVzIjp7ImVfZG9tX29wdGltaXphdGlvbiI6dHJ1ZSwiZV9vcHRpbWl6ZWRfYXNzZXRzX2xvYWRpbmciOnRydWUsImVfb3B0aW1pemVkX2Nzc19sb2FkaW5nIjp0cnVlLCJhMTF5X2ltcHJvdmVtZW50cyI6dHJ1ZSwiZV9pbXBvcnRfZXhwb3J0Ijp0cnVlLCJhZGRpdGlvbmFsX2N1c3RvbV9icmVha3BvaW50cyI6dHJ1ZSwiZV9oaWRkZW5fd29yZHByZXNzX3dpZGdldHMiOnRydWUsImxhbmRpbmctcGFnZXMiOnRydWUsImVsZW1lbnRzLWNvbG9yLXBpY2tlciI6dHJ1ZSwiZmF2b3JpdGUtd2lkZ2V0cyI6dHJ1ZSwiYWRtaW4tdG9wLWJhciI6dHJ1ZX0sInVybHMiOnsiYXNzZXRzIjoiaHR0cDpcL1wvbG9jYWxob3N0XC93cC1jb250ZW50XC9wbHVnaW5zXC9lbGVtZW50b3JcL2Fzc2V0c1wvIn0sInNldHRpbmdzIjp7InBhZ2UiOltdLCJlZGl0b3JQcmVmZXJlbmNlcyI6W119LCJraXQiOnsiYWN0aXZlX2JyZWFrcG9pbnRzIjpbInZpZXdwb3J0X21vYmlsZSIsInZpZXdwb3J0X3RhYmxldCJdLCJnbG9iYWxfaW1hZ2VfbGlnaHRib3giOiJ5ZXMiLCJsaWdodGJveF9lbmFibGVfY291bnRlciI6InllcyIsImxpZ2h0Ym94X2VuYWJsZV9mdWxsc2NyZWVuIjoieWVzIiwibGlnaHRib3hfZW5hYmxlX3pvb20iOiJ5ZXMiLCJsaWdodGJveF9lbmFibGVfc2hhcmUiOiJ5ZXMiLCJsaWdodGJveF90aXRsZV9zcmMiOiJ0aXRsZSIsImxpZ2h0Ym94X2Rlc2NyaXB0aW9uX3NyYyI6ImRlc2NyaXB0aW9uIn0sInBvc3QiOnsiaWQiOjM3MSwidGl0bGUiOiJORlQlMjBBUEklMjBFbmdpbmUlMjAlN0MlMjBVc2FnZSIsImV4Y2VycHQiOiIiLCJmZWF0dXJlZEltYWdlIjpmYWxzZX19Owo="></script> <script defer type="text/javascript" src="./../wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.6.5" id="elementor-frontend-js"></script> <script type="text/javascript" src="./../wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9" id="regenerator-runtime-js"></script> <script type="text/javascript" src="./../wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script> <script type="text/javascript" src="./../wp-includes/js/dist/hooks.min.js?ver=c6d64f2cb8f5c6bb49caca37f8828ce3" id="wp-hooks-js"></script> <script type="text/javascript" src="./../wp-includes/js/dist/i18n.min.js?ver=ebee46757c6a411e38fd079a7ac71d94" id="wp-i18n-js"></script> <script defer id="wp-i18n-js-after" src="data:text/javascript;base64,CndwLmkxOG4uc2V0TG9jYWxlRGF0YSggeyAndGV4dCBkaXJlY3Rpb25cdTAwMDRsdHInOiBbICdsdHInIF0gfSApOwo="></script> <script defer type="text/javascript" src="./../wp-content/cache/autoptimize/js/autoptimize_single_392ad5dfad1a6423c5f557b83278cd6f.js?ver=6.0" id="qi-addons-for-elementor-elementor-js"></script> </body>
 </html>
